@@ -1,0 +1,42 @@
+/// <reference path="../globals/_scut.scss" />
+/// <reference path="../globals/_variables.scss" />
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-worksans;
+}
+
+
+.row {
+  .space-10 {
+    @include setRowSpace(10);
+  }
+  .space-20 {
+    @include setRowSpace(20);
+  }
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.hide-md {
+  display: none;
+}
+
+@include respondTo(tabletPortrait) {
+  body {
+    font-size: 13px;
+  }
+  .hide-md {
+    display: block;
+  }
+
+  .hide-sm {
+    display: none;
+  }
+
+}
