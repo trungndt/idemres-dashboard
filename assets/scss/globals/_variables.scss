@@ -1,20 +1,21 @@
 // Color set
 $green: #00b169;
 $lightGreen: #e2f3ed;
-$blue: #1083ff;
-$darkBlue: #162a3e;
-$blackBlue: #202d39;
-$lightBlue: #0099ff;
-$blueSky: #e5f4ff;
-$red: #fc665c;
-$oranges: #ff8303;
-$gray: #aaaaaa;
+// $blue: #1083ff;
+$blue: #005CAF;
+$darkBlue: #162A3e;
+$blackBlue: #202D39;
+$lightBlue: #0095FF;
+$blueSky: #e5F4FF;
+$red: #FC665C;
+$oranges: #FF8303;
+$gray: #AAA;
 $dark-gray: #777777;
-$white: #fff;
+$white: #FFF;
 
 $color-default: $dark-gray;
 
-$color-primary: $darkBlue;
+$color-primary: $blue;
 
 $color-info: $lightBlue;
 
@@ -26,60 +27,14 @@ $color-danger: $red;
 
 $navHeight: 60px;
 $height: 100px;
-$formRadius: 5px;
+
 $mobileSpace: 10px;
+
+$formRadius: 5px;
+$formHeight: 30px;
 //Font
 $font-size: 14px;
-$font-cormorant: 'Cormorant Garamond', serif;
-$font-worksans: 'Work Sans', sans-serif;
+// $font-cormorant: 'Cormorant Garamond', serif;
+// $font-worksans: 'Work Sans', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
 //common variables
-
-// $giant-fonts: (
-//   null: 90px,
-//   $mdDesktop: 50px,
-//   $xsDesktop: 30px,
-//   $largeScreen: 110px
-// );
-
-// $xlg-fonts: (
-//   null: 60px,
-//   $mdDesktop: 45px,
-//   $xsDesktop: 40px,
-//   $largeScreen: 80px
-// );
-
-// $lg-fonts: (
-//   null: 46px,
-//   $mdDesktop: 40px,
-//   $xsDesktop: 28px,
-//   $largeScreen: 55px
-// );
-
-// $md-fonts: (
-//   null: 30px,
-//   $mdDesktop: 25px,
-//   $xsDesktop: 20px,
-//   $largeScreen: 40px
-// );
-
-// $sm-fonts: (
-//   null: 18px,
-//   $mdDesktop: 16px,
-//   $xsDesktop: 15px,
-//   // $tabletPortrait: 13px,
-//   $largeScreen: 24px
-// );
-
-// $next-fonts: (
-//   null: 24px,
-//   $mdDesktop: 22px,
-//   $xsDesktop: 20px,
-//   $largeScreen: 28px
-// );
-
-// $content-fonts: (
-//   null: 14px,
-//   $mdDesktop: 13px,
-//   $xsDesktop: 12px,
-//   $largeScreen: 16px
-// );

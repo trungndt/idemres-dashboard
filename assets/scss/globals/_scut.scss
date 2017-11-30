@@ -475,10 +475,11 @@ $directions: ('t':'top', 'r':'right', 'b':'bottom', 'l':'left');
 		&:not(:checked) + label,
 		&:checked + label {
 			// height: 30px;
+			min-height: $smSize;
 			line-height: $smSize;
 			padding-left: 23px;
 			position: relative;
-			top: 7px;
+			// top: 7px;
 			&:before {
 				width: $smSize;
 				height: $smSize;

@@ -20,22 +20,15 @@
 // }
 
 
-// .btn {
-//   @include transition();
-// }
+.btn {
+  @include transition();
+}
 
-// button, a {
-//   &, &:focus, &:active {
-//     outline: none !important;
-//   }
-// }
-
-// .btn-group-lg>.btn, .btn-lg {
-//   font-size: 15px;
-//   font-weight: 500;
-//   padding-left: 25px;
-//   padding-right: 25px;
-// }
+button, a {
+  &, &:focus, &:active {
+    outline: none !important;
+  }
+}
 
 // .control-group {
 //   .btn {
@@ -97,46 +90,6 @@
 //   font-weight: 700;
 // }
 
-// a {
-//   color: $color-info;
-//   @include transition();
-//   &:hover,
-//   &:focus,
-//   &:active {
-//     text-decoration: none;
-//     color: $color-info-darker;
-//   }
-// }
-
-// .font-13 {
-//   font-size: 13px;
-// }
-
-// .text-cormo {
-//   font-family: $font-cormorant;
-//   // padding: 20px ;
-// }
-// .title-p20 {
-//   padding: 20px;
-// }
-
-// h1, h2, h3, h4, h5 {
-//   &.text-cormo {
-//     font-weight: 600;
-//     letter-spacing: 1.5px;
-//   }
-// }
-
-// h5 {
-//   font-size: 12px;
-// }
-
-// table {
-//   font-size: inherit;
-//   font-weight: normal;
-//   line-height: 1.4;
-// }
-
 // .nice-select.select-white {
 //   color: #000;
 //   // border: none;
@@ -164,77 +117,76 @@
 //     width: 100%;
 //   }
 // }
+.form-horizontal {
+	.control-label {
+		font-size: 13px;
+		font-weight: 400;
+		text-align: left;
+	}
 
-// .form-inline {
-//   label {
-//     font-weight: normal;
-//   }
-//   .nice-select.select-white {
-//     min-width: 220px;
-//     display: inline-block;
-//   }
-// }
+	.form-control {
+	  border-radius: $formRadius;
+	  border: 1px solid #e0e0e0;
+	  height: $formHeight;
+	  color: #333;
+	  font-size: 12px;
+	  @include prefix(box-shadow, 0 2px 3px rgba(#e0e0e0, .5) inset);
+	}
 
-// .form-horizontal.form-left {
-//   padding-right: 40px;
-//   @media (max-width: 768px){
-//     padding-right: 0px;
-//   }
-//   .form-group {
-//     margin-bottom: 10px;
-//   }
-//   .control-label {
-//     font-weight: 400;
-//     text-align: left;
-//   }
-//   .input-mix {
-//     position: relative;
-//   }
-//   .placeholder-right {
-//     .form-control {
-//       padding-right: 70px;
-//     }
-//     span {
-//       font-size: 10px;
-//       @extend .vertical-center;
-//       right: 15px;
-//       color: $color-default;
-//     }
-//   }
-//   .form-control {
-//     padding: 6px 7px;
-//     &.stripe-element {
-//       padding-top: 8px;
-//     }
-//   }
-//   // .placeholder-right {
-//   //   &::-webkit-input-placeholder { 
-//   //     text-align: right;
-//   //   }
-//   //   &:-moz-placeholder { 
-//   //     text-align: right;
-//   //   }
-//   //   &::-moz-placeholder {
-//   //     text-align: right;
-//   //   }
-//   //   &:-ms-input-placeholder {
-//   //     text-align: right;
-//   //   }
-//   // }
-// }
-// .form-control {
-//   border-radius: $formRadius;
-//   border: 1px solid #e0e0e0;
-//   color: #333;
-//   @include prefix(box-shadow, 0 2px 3px rgba(#e0e0e0, .5) inset);
-// }
+	.required {
+		&:after {
+			content: '*';
+			color: $color-danger;
+		}
+	}
+	.required-pre {
+		&:before {
+			content: '*';
+			color: $color-danger;
+			display: inline-block;
+			margin-right: 3px;
+		}
+	}
+
+	select.nice-select {
+		display: none;
+	}
+	.nice-select {
+		@extend .form-control;
+		padding-left: 12px;
+		line-height: $formHeight - 2px;
+		width: 100%;
+		&:after {
+			width: 15px;
+      height: 8px;
+      top: 11px;
+      margin: 0;
+      border: none;
+      transform-origin: 50% 50%;
+      @include transition;
+			@include bgImage($url: '../images/icon/icon-arrow-down-dark.png', $size: 100% 100%);
+			@include prefix(transform, none);
+		}
+		&.open:after {
+			@include prefix(transform, rotate(180deg));
+		}
+		.option {
+			min-height: $formHeight;
+			line-height: $formHeight;
+			&.selected {
+				font-weight: 400;
+			}
+		}
+	}
+}
+
 
 // input.form-control {
 //   height: 30px;
 // }
 
 // @include respondTo(tabletPortrait) {
-//   .form-horizontal .form-group {
+//   .form-horizontal .form-group{
 //     margin-left: -$mobileSpace;
 //     margin-right: -$mobileSpace;
 //   }

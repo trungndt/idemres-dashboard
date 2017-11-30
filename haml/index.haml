@@ -3,9 +3,8 @@
     %title Kingsmen
     %meta{charset:"utf-8"}
     %meta{content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name:"viewport"}
-    %link{href:"https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700|Work+Sans:300,400,500,600,700", rel:"stylesheet"}
+    %link{href:"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700", rel:"stylesheet"}
     %link{href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel:"stylesheet", type:"text/css"}
-    %link{href:"assets/plugins/jquery-daterange/daterangepicker.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/plugins/nice-select/css/nice-select.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
 
@@ -25,33 +24,68 @@
             %span 
               %strong Sofitel Singapore Resort
               Carrina Yang
-    %section#create-block
-      %h1 Create New Block
-      .create-event
-        .toggel-event
-        .content-toggel
-          %p Create Event
-        %form.form-horizontal
-          .form-group 
-            %label.col-sm-3.control-label Account Holder
-            .col-sm-5
-              %input.form-control{placeholder:"Enter Name or Code"}
-          .form-group 
-            %label.col-sm-3.control-label Event Reference
-            .col-sm-5
-              %input.form-control{placeholder:"e.g Booking/Block ID, Event Name"}
-          .form-group 
-            %label.col-sm-3.control-label Event Name
-            .col-sm-5
-              %input.form-control{placeholder:"Enter Name or Code"}
-          .form-group 
-            %label.col-sm-3.control-label Event Type
-            .col-sm-5
-              %input.form-control{placeholder:"Enter Name or Code"}
-          .form-group 
-            %label.col-sm-3.control-label No. of Participants
-            .col-sm-5
-              %input.form-control{placeholder:"Enter Name or Code"}
+    %section
+      .container
+        .heading
+          %h2 Create New Block
+          %a{href:"/"} Cancel and Go back
+        .panel-group.panel-trans-body#accordion{aria-multiselectable:"false"}
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a{href:"#collapseOne",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"true"}
+                  Create Event
+                .nice-check-item
+                  %input.nice-check.nice-check-sm#ckbNoEvent{type:"checkbox", name:""}
+                  %label{for:"ckbNoEvent"}.font-13 No Event
+            .panel-collapse.collapse.in#collapseOne
+              .panel-body
+                .create-event
+                  %form.form-horizontal
+                    .form-group
+                      %label.col-sm-3.col-sm-offset-2.control-label.required-pre Required Field
+                    .form-group
+                      %label.col-sm-2.control-label.required Account Holder
+                      .col-sm-5
+                        %input.form-control{placeholder:"Enter Name or Code"}
+                    .form-group
+                      %label.col-sm-2.control-label.required Event Reference
+                      .col-sm-5
+                        %input.form-control{placeholder:"e.g Booking/Block ID, Event Name"}
+                    .form-group
+                      %label.col-sm-2.control-label Event Name
+                      .col-sm-5
+                        %input.form-control{placeholder:""}
+                    .form-group
+                      %label.col-sm-2.control-label.required Event Type
+                      .col-sm-5
+                        %select.nice-select
+                          %option{selected:"selected",disabled:"disabled"} Select Event Type
+                          %option Event Type 1
+                          %option Event Type 2
+                    .form-group
+                      %label.col-sm-2.control-label.required No. of Participants
+                      .col-sm-2
+                        %input.form-control{placeholder:""}
+
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a.collapsed{href:"#collapseTwo",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"false"}
+                  Create Room Block
+                .nice-check-item
+                  %input.nice-check.nice-check-sm#ckbNoRoomBlock{type:"checkbox", name:""}
+                  %label{for:"ckbNoRoomBlock"}.font-13 No Room Block
+            .panel-collapse.collapse#collapseTwo
+              .panel-body
+
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %a.collapsed{href:"#collapseThree",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"false"}
+                  Assign Customer
+            .panel-collapse.collapse#collapseThree
+              .panel-body
 
 
     -# %section#main
@@ -113,9 +147,5 @@
 
 %script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}
 %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", type:"text/javascript"}
-%script{src:"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js", type:"text/javascript"}
-%script{src:"assets/plugins/jquery-daterange/jquery.daterangepicker.min.js", type:"text/javascript"}
 %script{src:"assets/plugins/nice-select/js/jquery.nice-select.min.js", type:"text/javascript"}
 %script{src:"assets/js/script.js", type:"text/javascript"}
-%script{src:"assets/js/main.js", type:"text/javascript"}
--# %script{async, defer, src:"https://maps.googleapis.com/maps/api/js?key=AIzaSyDDXXYRn0TSBjPl0n-EJEkgnNsOJvXOObg&callback=initMap"}
