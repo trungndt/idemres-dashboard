@@ -3,6 +3,8 @@ var sass = require('gulp-sass');
 var haml = require('gulp-haml');
 var lite = require('lite-server');
 var exec = require('gulp-exec');
+var coffeescript = require('gulp-coffeescript');
+// var coffeeStream = coffeescript({bare: true});
 
 gulp.task('sass', function() {
   return gulp.src(['assets/scss/**/*.scss'])
@@ -25,8 +27,25 @@ gulp.task('haml', function() {
     .pipe(gulp.dest('.'));
 });
 
+gulp.task('coffee', function() {
+  return gulp.src('assets/coffee/**/*.coffee')
+    // .pipe(coffeescript({bare: true}).on('error', gutil.log))
+    .pipe(coffeescript())
+    .pipe(gulp.dest('public/'));
+});
+ 
+// gulp.task('coffee', function() {
+//   gulp.src('./src/*.coffee')
+//     .pipe(coffeescript({bare: true}).on('error', gutil.log))
+//     .pipe(gulp.dest('./public/'));
+// });
+
+coffeeStream.on('error', function(err) {});
+
+
 gulp.task('watch', function() {
   gulp.watch('assets/scss/**/*.scss', ['sass']);
+  gulp.watch('assets/coffee/**/*.coffee', ['coffee']);
   // Other watchers
   gulp.watch('haml/**/*.haml', ['haml']);
 });
