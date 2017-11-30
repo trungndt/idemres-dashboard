@@ -801,15 +801,47 @@ $content-fonts: (
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  height: 35px;
+  padding: 7px 15px;
+  border-radius: 5px; }
+  .btn:active {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none; }
+
+a {
+  color: #0095FF;
+  text-decoration: underline; }
+  a.btn {
+    text-decoration: none; }
 
 button, button:focus, button:active, a, a:focus, a:active {
   outline: none !important; }
+
+.btn-info {
+  background-color: #0095FF;
+  border: none; }
+  .btn-info:hover, .btn-info:active, .btn-info:hover:active, .btn-info:focus {
+    background-color: #0077cc; }
+
+.form-horizontal .form-group {
+  margin-left: -5px;
+  margin-right: -5px; }
+  .form-horizontal .form-group > [class*="col"] {
+    padding-left: 5px;
+    padding-right: 5px; }
 
 .form-horizontal .control-label {
   font-size: 13px;
   font-weight: 400;
   text-align: left; }
+  .form-horizontal .control-label.text-center {
+    text-align: center; }
+  .form-horizontal .control-label.text-right {
+    text-align: right; }
 
 .form-horizontal .form-control, .form-horizontal .nice-select {
   border-radius: 5px;
@@ -876,7 +908,8 @@ button, button:focus, button:active, a, a:focus, a:active {
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #333; }
+  color: #333;
+  font-size: 13px; }
 
 section {
   padding: 30px 0; }
@@ -891,9 +924,6 @@ section {
     font-size: 20px;
     margin: 0; }
   .heading a {
-    text-decoration: underline;
-    color: #0095FF;
-    font-size: 13px;
     float: right; }
 
 .row .space-10 {
@@ -915,6 +945,12 @@ section {
 
 .hide-md {
   display: none; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
 
 .panel-trans-body .panel + .panel {
   margin-top: -1px; }
@@ -939,6 +975,7 @@ section {
       line-height: 1; }
     .panel-trans-body .panel .panel-heading a {
       color: #777777;
+      text-decoration: none;
       position: relative; }
       .panel-trans-body .panel .panel-heading a:hover, .panel-trans-body .panel .panel-heading a:active, .panel-trans-body .panel .panel-heading a:focus {
         text-decoration: none; }
@@ -1004,6 +1041,7 @@ header {
       width: auto; }
   header .logo-sub {
     color: #777;
+    text-decoration: none;
     display: inline-block;
     padding: 10px 40px 10px 10px;
     position: relative; }
@@ -1030,35 +1068,42 @@ header {
   padding: 13px 15px;
   margin: 0; }
   .navbar-form .form-group, .navbar-form .form-control, .navbar-form .form-horizontal .nice-select, .form-horizontal .navbar-form .nice-select {
-    width: 100%; }
+    width: 100%;
+    border-radius: 30px; }
 
-footer {
-  padding: 20px;
+.step-group {
   text-align: center;
-  font-size: 12px;
-  color: #555;
-  -webkit-box-shadow: 0 -1px 5px rgba(85, 85, 85, 0.5);
-  -moz-box-shadow: 0 -1px 5px rgba(85, 85, 85, 0.5);
-  -ms-box-shadow: 0 -1px 5px rgba(85, 85, 85, 0.5);
-  -o-box-shadow: 0 -1px 5px rgba(85, 85, 85, 0.5);
-  box-shadow: 0 -1px 5px rgba(85, 85, 85, 0.5); }
-  footer .dot-divider {
-    margin: 0 10px; }
-    footer .dot-divider:after {
-      content: '';
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      background-color: #000;
+  margin-bottom: 30px; }
+  .step-group ul {
+    margin: 0;
+    padding: 0; }
+    .step-group ul li {
       display: inline-block;
-      position: relative;
-      top: -2px; }
-
-@media (max-width: 992px) {
-  footer {
-    font-size: 11px; }
-    footer .dot-divider:after {
-      top: -1px; } }
+      position: relative; }
+    .step-group ul li + li {
+      padding-left: 50px; }
+      .step-group ul li + li:before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 1px;
+        background-color: #AAA;
+        position: absolute;
+        top: 48%;
+        left: 0; }
+    .step-group ul .btn {
+      border-radius: 30px;
+      border: 1px solid #0095FF;
+      color: #0095FF;
+      padding: 7px 20px;
+      text-decoration: none; }
+    .step-group ul .active .btn {
+      background-color: #0095FF;
+      color: #fff;
+      font-weight: 700; }
+    .step-group ul .active ~ li .btn {
+      border-color: #AAA;
+      color: #AAA; }
 
 .home #main #sidebar {
   width: 200px;

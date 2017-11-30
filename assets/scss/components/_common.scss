@@ -8,6 +8,7 @@
 body {
   font-family: $font-roboto;
   color: #333;
+  font-size: 13px;
 }
 
 section {
@@ -26,9 +27,7 @@ section {
     margin: 0;
   }
   a {
-    text-decoration: underline;
-    color: $color-info;
-    font-size: 13px;
+    // font-size: 13px;
     float: right;
   }
 }
@@ -48,6 +47,13 @@ section {
 
 .hide-md {
   display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
 }
 
 .panel-trans-body .panel+.panel {

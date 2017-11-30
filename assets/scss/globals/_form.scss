@@ -22,6 +22,20 @@
 
 .btn {
   @include transition();
+  height: $btnHeight;
+  padding: 7px 15px;
+  border-radius: $formRadius;
+  &:active {
+  	@include prefix(box-shadow, none);
+  }
+}
+
+a {
+	color: $color-info;
+	text-decoration: underline;
+	&.btn {
+		text-decoration: none;
+	}
 }
 
 button, a {
@@ -39,17 +53,16 @@ button, a {
 //   }
 // }
 
-// .btn-info {
-//   background-color: $color-info;
-//   border: none;
-//   &:hover,
-//   &:active,
-//   &:hover:active,
-//   &:focus {
-//     background-color: $color-info-darker;
-//   }
-  
-// }
+.btn-info {
+  background-color: $color-info;
+  border: none;
+  &:hover,
+  &:active,
+  &:hover:active,
+  &:focus {
+    background-color: $color-info-darker;
+  }
+}
 
 // .btn-info-bordered {
 //   background-color: transparent;
@@ -118,10 +131,19 @@ button, a {
 //   }
 // }
 .form-horizontal {
+	.form-group {
+		@include setRowSpace(10);
+	}
 	.control-label {
 		font-size: 13px;
 		font-weight: 400;
 		text-align: left;
+		&.text-center {
+		  text-align: center;
+		}
+		&.text-right {
+		  text-align: right;
+		}
 	}
 
 	.form-control {

@@ -384,6 +384,7 @@ $directions: ('t':'top', 'r':'right', 'b':'bottom', 'l':'left');
 
 @mixin clearLink($color: #000) {
 	color: $color;
+	text-decoration: none;
 	&:hover,
 	&:active,
 	&:focus {

@@ -15,9 +15,9 @@
           %a.logo{href:"/"}
             %img.img-responsive{src:"assets/images/logo-sofitel.png"}
         .col-sm-6
-          %form.navbar-form
-            .form-group
-              %input.form-control{type:"text", placeholder:"Search..."}
+          -# %form.navbar-form
+          -#   .form-group
+          -#     %input.form-control{type:"text", placeholder:"Search..."}
         .col-sm-3.col-sm-offset-1
           %a.logo-sub{href:"/"}
             %img{src:"assets/images/sol.png"}
@@ -29,6 +29,14 @@
         .heading
           %h2 Create New Block
           %a{href:"/"} Cancel and Go back
+        .step-group
+          %ul
+            %li.active
+              %a.btn{href:"#"} Enter Block Details
+            %li
+              %a.btn{href:"#"} Preview Details
+            %li
+              %a.btn{href:"#"} Preview Message
         .panel-group.panel-trans-body#accordion{aria-multiselectable:"false"}
           .panel.panel-default
             .panel-heading
@@ -46,19 +54,19 @@
                       %label.col-sm-3.col-sm-offset-2.control-label.required-pre Required Field
                     .form-group
                       %label.col-sm-2.control-label.required Account Holder
-                      .col-sm-5
+                      .col-sm-6
                         %input.form-control{placeholder:"Enter Name or Code"}
                     .form-group
                       %label.col-sm-2.control-label.required Event Reference
-                      .col-sm-5
+                      .col-sm-6
                         %input.form-control{placeholder:"e.g Booking/Block ID, Event Name"}
                     .form-group
                       %label.col-sm-2.control-label Event Name
-                      .col-sm-5
+                      .col-sm-6
                         %input.form-control{placeholder:""}
                     .form-group
                       %label.col-sm-2.control-label.required Event Type
-                      .col-sm-5
+                      .col-sm-6
                         %select.nice-select
                           %option{selected:"selected",disabled:"disabled"} Select Event Type
                           %option Event Type 1
@@ -67,6 +75,23 @@
                       %label.col-sm-2.control-label.required No. of Participants
                       .col-sm-2
                         %input.form-control{placeholder:""}
+
+                    .form-group.event-dates-item
+                      %label.col-sm-2.control-label.required Event Dates
+                      .col-sm-2
+                        %input.form-control{placeholder:""}
+                      %label.col-sm-1.control-label.text-right From
+                      .col-sm-2
+                        %input.form-control{placeholder:""}
+                      %label.col-sm-1.control-label.text-center to
+                      .col-sm-2
+                        %input.form-control{placeholder:""}
+                    .form-group
+                      .col-sm-3.col-sm-offset-2
+                        %a{href:"#"} + Add Another Date
+                    .form-group.mt-40
+                      .col-sm-2.col-sm-offset-2
+                        %a.btn.btn-info.btn-block{href:"#collapseTwo",data-toggle:"collapse",data-parent:"#accordion"} Continue
 
           .panel.panel-default
             .panel-heading
