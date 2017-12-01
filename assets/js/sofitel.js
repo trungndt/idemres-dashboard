@@ -11,7 +11,9 @@
       };
 
       General.setupDatePicker = function() {
-        $('.date-picker').datepicker();
+        $('.date-picker').datepicker({
+          'dateFormat': 'dd M yy'
+        });
       };
 
       General.setupTimePicker = function() {
@@ -50,6 +52,7 @@
         $(document).on('show.bs.collapse', '.disabled .panel-collapse', function(e) {
           preventDefault(e);
         });
+        $(document).on('click', '[data-action="complete-step"]', function(e) {});
       };
 
       return CreateNewBlock;

@@ -7,7 +7,8 @@ $ ->
 			do this.setupTimePicker
 			return
 		@setupDatePicker: ->
-			$('.date-picker').datepicker()
+			$('.date-picker').datepicker
+				'dateFormat': 'dd M yy'
 			return
 		@setupTimePicker: ->
 			$('.time-picker').timepicker
@@ -39,6 +40,11 @@ $ ->
 			# [EvENT] Disable accordion when class "disabled" is added
 			$(document).on 'show.bs.collapse', '.disabled .panel-collapse', (e) ->
 				preventDefault(e)
+				return
+
+			# [EvENT] Click on button "Continue" to mark a step as complete
+			$(document).on 'click', '[data-action="complete-step"]', (e) ->
+				
 				return
 			return
 	do General.init
