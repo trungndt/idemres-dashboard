@@ -153,6 +153,8 @@ button, a {
 	  color: #333;
 	  font-size: 12px;
 	  @include prefix(box-shadow, 0 2px 3px rgba(#e0e0e0, .5) inset);
+
+	  
 	}
 
 	.required {
@@ -199,6 +201,17 @@ button, a {
 				font-weight: 400;
 			}
 		}
+	}
+}
+
+.form-control.icon-left {
+	padding-left: 32px;
+	$iconPos: 9px;
+	&.date-picker {
+		@include bgImage('../images/icon/icon-calendar.png', $iconPos 50%, auto 12px);
+	}
+	&.time-picker {
+		@include bgImage('../images/icon/icon-time.png', $iconPos 50%, auto 14px);
 	}
 }
 

@@ -902,6 +902,13 @@ button, button:focus, button:active, a, a:focus, a:active {
     .form-horizontal .nice-select .option.selected {
       font-weight: 400; }
 
+.form-control.icon-left, .form-horizontal .icon-left.nice-select {
+  padding-left: 32px; }
+  .form-control.icon-left.date-picker, .form-horizontal .icon-left.date-picker.nice-select {
+    background: url("../images/icon/icon-calendar.png") 9px 50%/auto 12px no-repeat; }
+  .form-control.icon-left.time-picker, .form-horizontal .icon-left.time-picker.nice-select {
+    background: url("../images/icon/icon-time.png") 9px 50%/auto 14px no-repeat; }
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -1010,6 +1017,14 @@ section {
       float: right; }
   .panel-trans-body .panel .panel-body {
     padding: 30px 80px; }
+  .panel-trans-body .panel.disabled .panel-heading {
+    background-color: #eee; }
+    .panel-trans-body .panel.disabled .panel-heading, .panel-trans-body .panel.disabled .panel-heading a {
+      cursor: not-allowed; }
+
+.nice-select .list {
+  max-height: 300px;
+  overflow: auto; }
 
 @media (max-width: 992px) {
   body {

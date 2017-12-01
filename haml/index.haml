@@ -4,6 +4,8 @@
     %meta{charset:"utf-8"}
     %meta{content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name:"viewport"}
     %link{href:"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700", rel:"stylesheet"}
+    %link{href:"assets/plugins/jquery-ui/jquery-ui.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/timepicker/jquery.timepicker.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/plugins/nice-select/css/nice-select.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
@@ -44,7 +46,7 @@
                 %a{href:"#collapseOne",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"true"}
                   Create Event
                 .nice-check-item
-                  %input.nice-check.nice-check-sm#ckbNoEvent{type:"checkbox", name:""}
+                  %input.nice-check.nice-check-sm#ckbNoEvent{type:"checkbox", name:"",data-action:"disable-accordion"}
                   %label{for:"ckbNoEvent"}.font-13 No Event
             .panel-collapse.collapse.in#collapseOne
               .panel-body
@@ -67,13 +69,37 @@
                     .form-group
                       %label.col-sm-2.control-label.required Event Type
                       .col-sm-6
-                        %select.nice-select
+                        %select.nice-select#cbbEventType
                           %option{selected:"selected",disabled:"disabled"} Select Event Type
-                          %option Event Type 1
-                          %option Event Type 2
-                          %option{value:"other"} Other
+                          %option{value:"Award Ceremony"} Award Ceremony
+                          %option{value:"Birthday"} Birthday
+                          %option{value:"Board Meeting"} Board Meeting
+                          %option{value:"Briefing"} Briefing
+                          %option{value:"Business Dinner"} Business Dinner
+                          %option{value:"Conference"} Conference
+                          %option{value:"Corporate Event"} Corporate Event
+                          %option{value:"Course"} Course
+                          %option{value:"Expo"} Expo
+                          %option{value:"Family Event"} Family Event
+                          %option{value:"Festival"} Festival
+                          %option{value:"Fundraiser"} Fundraiser
+                          %option{value:"Incentive"} Incentive
+                          %option{value:"Meeting"} Meeting
+                          %option{value:"Networking"} Networking
+                          %option{value:"Party"} Party
+                          %option{value:"Press Conference"} Press Conference
+                          %option{value:"Product Launch"} Product Launch
+                          %option{value:"Retreat"} Retreat
+                          %option{value:"Reunion"} Reunion
+                          %option{value:"Seminar"} Seminar
+                          %option{value:"Shareholder Meeting"} Shareholder Meeting
+                          %option{value:"Team Building"} Team Building
+                          %option{value:"Trade Show"} Trade Show
+                          %option{value:"VIP Event"} VIP Event
+                          %option{value:"Wedding"} Wedding
+                          %option{value:"Other"} Other
                       .col-sm-3
-                        %input.form-control{placeholder:"Other event type"}
+                        %input.form-control#txtOtherEvent{placeholder:"Other event type", style:"display:none"}
                     .form-group
                       %label.col-sm-2.control-label.required No. of Participants
                       .col-sm-2
@@ -82,13 +108,13 @@
                     .form-group.event-dates-item
                       %label.col-sm-2.control-label.required Event Dates
                       .col-sm-2
-                        %input.form-control{placeholder:""}
+                        %input.form-control.icon-left.date-picker{placeholder:"Select Date"}
                       %label.col-sm-1.control-label.text-right From
                       .col-sm-2
-                        %input.form-control{placeholder:""}
+                        %input.form-control.icon-left.time-picker{placeholder:"Select Time"}
                       %label.col-sm-1.control-label.text-center to
                       .col-sm-2
-                        %input.form-control{placeholder:""}
+                        %input.form-control.icon-left.time-picker{placeholder:"Select Time"}
                     .form-group
                       .col-sm-3.col-sm-offset-2
                         %a{href:"#"} + Add Another Date
@@ -102,7 +128,7 @@
                 %a.collapsed{href:"#collapseTwo",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"false"}
                   Create Room Block
                 .nice-check-item
-                  %input.nice-check.nice-check-sm#ckbNoRoomBlock{type:"checkbox", name:""}
+                  %input.nice-check.nice-check-sm#ckbNoRoomBlock{type:"checkbox", name:"",data-action:"disable-accordion"}
                   %label{for:"ckbNoRoomBlock"}.font-13 No Room Block
             .panel-collapse.collapse#collapseTwo
               .panel-body
@@ -174,6 +200,8 @@
 
 
 %script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}
+%script{src:"assets/plugins/jquery-ui/jquery-ui.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/timepicker/jquery.timepicker.min.js", type:"text/javascript"}
 %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", type:"text/javascript"}
 %script{src:"assets/plugins/nice-select/js/jquery.nice-select.min.js", type:"text/javascript"}
-%script{src:"assets/js/script.js", type:"text/javascript"}
+%script{src:"assets/js/sofitel.js", type:"text/javascript"}

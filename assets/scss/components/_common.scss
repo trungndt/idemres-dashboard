@@ -98,6 +98,20 @@ section {
   .panel-body {
     padding: 30px 80px;
   }
+
+  &.disabled {
+    .panel-heading {
+      background-color: #eee;
+      &, a {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.nice-select .list {
+  max-height: 300px;
+  overflow: auto;
 }
 
 @include respondTo(tabletPortrait) {
