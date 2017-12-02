@@ -40,15 +40,16 @@
             %li
               %a.btn{href:"#"} Preview Message
         .panel-group.panel-trans-body#accordion{aria-multiselectable:"false"}
+          -# Panel: Create Event
           .panel.panel-default
             .panel-heading
               %h4.panel-title
-                %a{href:"#collapseOne",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"true"}
+                %a.collapsed{href:"#collapseOne",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"false"}
                   Create Event
                 .nice-check-item
                   %input.nice-check.nice-check-sm#ckbNoEvent{type:"checkbox", name:"",data-action:"disable-accordion"}
-                  %label{for:"ckbNoEvent"}.font-13 No Event
-            .panel-collapse.collapse.in#collapseOne
+                  %label{for:"ckbNoEvent"} No Event
+            .panel-collapse.collapse#collapseOne
               .panel-body
                 .create-event
                   %form.form-horizontal
@@ -122,16 +123,170 @@
                       .col-sm-2.col-sm-offset-2
                         %a.btn.btn-info.btn-block{href:"#collapseTwo",data-toggle:"collapse",data-parent:"#accordion",data-action:"complete-step"} Continue
 
+          -# Panel: Create Room Block
           .panel.panel-default
             .panel-heading
               %h4.panel-title
-                %a.collapsed{href:"#collapseTwo",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"false"}
+                %a{href:"#collapseTwo",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"true"}
                   Create Room Block
                 .nice-check-item
                   %input.nice-check.nice-check-sm#ckbNoRoomBlock{type:"checkbox", name:"",data-action:"disable-accordion"}
-                  %label{for:"ckbNoRoomBlock"}.font-13 No Room Block
-            .panel-collapse.collapse#collapseTwo
+                  %label{for:"ckbNoRoomBlock"} No Room Block
+            .panel-collapse.collapse.in#collapseTwo
               .panel-body
+                .panel.panel-transparent.mb-25
+                  .panel-heading
+                    .row
+                      .col-xs-6
+                        %h4 1. Setup
+                      .col-xs-6.text-right
+                        %span.required-pre Required Field
+                  .panel-body
+                    %form.form-horizontal
+                      .form-group
+                        %label.col-sm-3.control-label.required Room Block Code
+                        .col-sm-6
+                          %input.form-control{placeholder:""}
+                      .form-group
+                        %label.col-sm-3.control-label.required Account Holder
+                        .col-sm-6
+                          %input.form-control{placeholder:""}
+                      .form-group
+                        %label.col-sm-3.control-label.required.pt-0 Billing Setup
+                        .col-sm-6
+                          .nice-check-item
+                            %input.nice-check.nice-check-sm#ckbMasterBilling{type:"checkbox", name:""}
+                            %label{for:"ckbMasterBilling"} Master Billing
+                          .nice-check-item
+                            %input.nice-check.nice-check-sm#ckbCollectCardDetails{type:"checkbox", name:""}
+                            %label{for:"ckbCollectCardDetails"} Collect Guest Credit Card Details
+                      .form-group
+                        %label.col-sm-3.control-label
+                          %span Attachments
+                          %small Visible to Customers
+                        .col-sm-6
+                          %span.btn.btn-info.btn-block.btn-file
+                            %span Add File
+                            %input{type:"file",name:""}
+
+                .panel.panel-transparent.mb-25
+                  .panel-heading
+                    .row
+                      .col-xs-6
+                        %h4 2. Rooming Dates
+                      .col-xs-6.text-right
+                        %span.required-pre Required Field
+                  .panel-body
+                    %form.form-horizontal
+                      .form-group
+                        %label.col-sm-3.control-label.required Contracted Dates From
+                        .col-sm-2
+                          %input.form-control.icon-left.date-picker{placeholder:"Select Date"}
+                        %label.col-sm-1.control-label.text-center to
+                        .col-sm-2
+                          %input.form-control.icon-left.date-picker{placeholder:"Select Date"}
+                      .form-group
+                        %label.col-sm-3.control-label.required Total Nights:
+                        %label.col-sm-3.control-label
+                          %strong 0 nights
+                      .form-group
+                        %label.col-sm-3.control-label.required No. of Pre-Contract Nights
+                        .col-sm-1
+                          %input.form-control{placeholder:""}
+                      .form-group
+                        %label.col-sm-3.control-label.required No. of Post-Contract Nights
+                        .col-sm-1
+                          %input.form-control{placeholder:""}
+
+                .panel.panel-transparent.mb-25
+                  .panel-heading
+                    .row
+                      .col-xs-6
+                        %h4 3. Contracted Rooms Setup
+                      .col-xs-6.text-right
+                        %span.required-pre Required Field
+                  .panel-body
+                    %form.form-horizontal
+                      .form-group
+                        %label.col-sm-3.control-label
+                          %strong Room #1
+                      .form-group
+                        %label.col-sm-3.control-label.required Room Type
+                        .col-sm-4
+                          %select.nice-select#cbbRoomType
+                            %option{selected:"selected",disabled:"disabled"} Select Room Type
+                            %option Room Type 1
+                            %option Room Type 2
+                        .col-sm-3
+                          %select.nice-select#cbbCapacity
+                            %option{selected:"selected",disabled:"disabled"} Select Capacity
+                            %option Capacity 1
+                            %option Capacity 2
+                      .form-group
+                        %label.col-sm-3.control-label.required No. of Rooms
+                        .col-sm-1
+                          %input.form-control{placeholder:""}
+                      .form-group
+                        %label.col-sm-3.control-label Room Rate ($)
+                        .col-sm-1
+                          %input.form-control{placeholder:""}
+                        %label.col-sm-1.control-label \/night
+                      .form-group
+                        .col-sm-3.col-sm-offset-3
+                          %a{href:"#"} + Add Another Room
+
+                .panel.panel-transparent.mb-25
+                  .panel-heading
+                    .row
+                      .col-xs-6
+                        %h4 3. NON-Contracted Rooms Setup
+                      .col-xs-6.text-right
+                        %span.required-pre Required Field
+                  .panel-body
+                    %form.form-horizontal
+                      .form-group
+                        %label.col-sm-3.control-label
+                          %strong Room #A
+                        .col-sm-3
+                          %a{href:"#"} \- Remove Room
+                      .form-group
+                        %label.col-sm-3.control-label.required Room Type
+                        .col-sm-7
+                          %select.nice-select#cbbRoomType
+                            %option{selected:"selected",disabled:"disabled"} Room #1 - Deluxe, Single
+                            %option Room Type 1
+                            %option Room Type 2
+                       
+                      .form-group
+                        %label.col-sm-3.control-label.required No. of Rooms
+                        .col-sm-6
+                          .row.space-10
+                            %label.col-sm-3.control-label Pre-contract
+                            .col-sm-2
+                              %input.form-control{placeholder:""}
+                            %label.col-sm-3.col-sm-offset-2.control-label Post-contract
+                            .col-sm-2
+                              %input.form-control{placeholder:""}
+                      .form-group
+                        %label.col-sm-3.control-label.required Non-Contracted Room Rates ($)
+                        .col-sm-6
+                          .row.space-10
+                            %label.col-sm-3.control-label Pre-contract
+                            .col-sm-2
+                              %input.form-control{placeholder:""}
+                            %label.col-sm-2.control-label \/night
+                            %label.col-sm-3.control-label Post-contract
+                            .col-sm-2
+                              %input.form-control{placeholder:""}
+                      .form-group
+                        %label.col-sm-3.control-label 
+                          %span Room Inclusion
+                          %small Based on the selected contracted room.
+                        %label.col-sm-6.control-label.text-gray
+                          Room inclusions will be duplicated from the selected contracted room.
+                      .form-group
+                        .col-sm-3.col-sm-offset-3
+                          %a{href:"#"} + Add Another Room
 
           .panel.panel-default
             .panel-heading

@@ -662,11 +662,11 @@ $content-fonts: (
 .font-40 {
   font-size: 40px; }
 
-.vertical-center, .panel-trans-body .panel .panel-heading a:after,
+.vertical-center, .panel-trans-body > .panel > .panel-heading a:after,
 .horizontal-center {
   position: absolute; }
 
-.vertical-center, .panel-trans-body .panel .panel-heading a:after {
+.vertical-center, .panel-trans-body > .panel > .panel-heading a:after {
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -842,6 +842,11 @@ button, button:focus, button:active, a, a:focus, a:active {
     text-align: center; }
   .form-horizontal .control-label.text-right {
     text-align: right; }
+  .form-horizontal .control-label small {
+    color: #777777;
+    display: block;
+    font-size: 11px;
+    margin-top: 5px; }
 
 .form-horizontal .form-control, .form-horizontal .nice-select {
   border-radius: 5px;
@@ -854,16 +859,6 @@ button, button:focus, button:active, a, a:focus, a:active {
   -ms-box-shadow: 0 2px 3px rgba(224, 224, 224, 0.5) inset;
   -o-box-shadow: 0 2px 3px rgba(224, 224, 224, 0.5) inset;
   box-shadow: 0 2px 3px rgba(224, 224, 224, 0.5) inset; }
-
-.form-horizontal .required:after {
-  content: '*';
-  color: #FC665C; }
-
-.form-horizontal .required-pre:before {
-  content: '*';
-  color: #FC665C;
-  display: inline-block;
-  margin-right: 3px; }
 
 .form-horizontal select.nice-select {
   display: none; }
@@ -902,6 +897,28 @@ button, button:focus, button:active, a, a:focus, a:active {
     .form-horizontal .nice-select .option.selected {
       font-weight: 400; }
 
+.btn-file {
+  display: inline-block;
+  position: relative; }
+  .btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer; }
+
+.required:after {
+  content: '*';
+  color: #FC665C; }
+
+.required-pre:before {
+  content: '*';
+  color: #FC665C;
+  display: inline-block;
+  margin-right: 3px; }
+
 .form-control.icon-left, .form-horizontal .icon-left.nice-select {
   padding-left: 32px; }
   .form-control.icon-left.date-picker, .form-horizontal .icon-left.date-picker.nice-select {
@@ -933,17 +950,17 @@ section {
   .heading a {
     float: right; }
 
-.row .space-10 {
+.row.space-10 {
   margin-left: -5px;
   margin-right: -5px; }
-  .row .space-10 > [class*="col"] {
+  .row.space-10 > [class*="col"] {
     padding-left: 5px;
     padding-right: 5px; }
 
-.row .space-20 {
+.row.space-20 {
   margin-left: -10px;
   margin-right: -10px; }
-  .row .space-20 > [class*="col"] {
+  .row.space-20 > [class*="col"] {
     padding-left: 10px;
     padding-right: 10px; }
 
@@ -959,10 +976,30 @@ section {
 .text-right {
   text-align: right; }
 
-.panel-trans-body .panel + .panel {
+.text-gray {
+  color: #AAA; }
+
+.panel-group .panel {
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none; }
+
+.panel-transparent {
+  border: 1px solid #e0e0e0; }
+  .panel-transparent .panel-heading {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 16px 15px; }
+    .panel-transparent .panel-heading h4 {
+      margin: 0;
+      color: #777777; }
+
+.panel-trans-body > .panel + .panel {
   margin-top: -1px; }
 
-.panel-trans-body .panel {
+.panel-trans-body > .panel {
   border: none;
   border-radius: 0;
   -webkit-box-shadow: none;
@@ -970,23 +1007,23 @@ section {
   -ms-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none; }
-  .panel-trans-body .panel .panel-heading {
+  .panel-trans-body > .panel > .panel-heading {
     border: 1px solid #e0e0e0;
     border-radius: 0;
     padding: 16px 45px; }
-    .panel-trans-body .panel .panel-heading + .panel-collapse > .panel-body {
+    .panel-trans-body > .panel > .panel-heading + .panel-collapse > .panel-body {
       border: none; }
-    .panel-trans-body .panel .panel-heading .panel-title {
+    .panel-trans-body > .panel > .panel-heading .panel-title {
       font-size: 18px;
       font-weight: 400;
       line-height: 1; }
-    .panel-trans-body .panel .panel-heading a {
+    .panel-trans-body > .panel > .panel-heading a {
       color: #777777;
       text-decoration: none;
       position: relative; }
-      .panel-trans-body .panel .panel-heading a:hover, .panel-trans-body .panel .panel-heading a:active, .panel-trans-body .panel .panel-heading a:focus {
+      .panel-trans-body > .panel > .panel-heading a:hover, .panel-trans-body > .panel > .panel-heading a:active, .panel-trans-body > .panel > .panel-heading a:focus {
         text-decoration: none; }
-      .panel-trans-body .panel .panel-heading a:after {
+      .panel-trans-body > .panel > .panel-heading a:after {
         content: '';
         display: block;
         position: absolute;
@@ -1006,20 +1043,20 @@ section {
         -o-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
         left: -25px; }
-      .panel-trans-body .panel .panel-heading a.collapsed:after {
+      .panel-trans-body > .panel > .panel-heading a.collapsed:after {
         -webkit-transform: translateY(-50%) rotate(90deg);
         -moz-transform: translateY(-50%) rotate(90deg);
         -ms-transform: translateY(-50%) rotate(90deg);
         -o-transform: translateY(-50%) rotate(90deg);
         transform: translateY(-50%) rotate(90deg); }
-    .panel-trans-body .panel .panel-heading .nice-check-item {
+    .panel-trans-body > .panel > .panel-heading .nice-check-item {
       width: 150px;
       float: right; }
-  .panel-trans-body .panel .panel-body {
+  .panel-trans-body > .panel > .panel-collapse > .panel-body {
     padding: 30px 80px; }
-  .panel-trans-body .panel.disabled .panel-heading {
+  .panel-trans-body > .panel.disabled .panel-heading {
     background-color: #eee; }
-    .panel-trans-body .panel.disabled .panel-heading, .panel-trans-body .panel.disabled .panel-heading a {
+    .panel-trans-body > .panel.disabled .panel-heading, .panel-trans-body > .panel.disabled .panel-heading a {
       cursor: not-allowed; }
 
 .nice-select .list {

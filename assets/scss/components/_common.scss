@@ -33,10 +33,10 @@ section {
 }
 
 .row {
-  .space-10 {
+  &.space-10 {
     @include setRowSpace(10);
   }
-  .space-20 {
+  &.space-20 {
     @include setRowSpace(20);
   }
 }
@@ -55,16 +55,35 @@ section {
 .text-right {
   text-align: right;
 }
+.text-gray {
+  color: $gray;
+}
+// Panel 
+.panel-group .panel {
+  border-radius: 0;
+  @include prefix(box-shadow, none);
+}
+.panel-transparent {
+  border: 1px solid $light-gray;
+  .panel-heading {
+    border-bottom: 1px solid $light-gray;
+    padding: 16px 15px;
+    h4 {
+      margin: 0;
+      color: $color-default;
+    }
+  }
+}
 
-.panel-trans-body .panel+.panel {
+.panel-trans-body > .panel+.panel {
   margin-top: -1px;
 }
-.panel-trans-body .panel {
+.panel-trans-body > .panel {
   border: none;
   border-radius: 0;
   @include prefix(box-shadow, none);
-  .panel-heading {
-    border: 1px solid #e0e0e0;
+  & > .panel-heading {
+    border: 1px solid $light-gray;
     border-radius: 0;
     padding: 16px 45px;
     // padding-left: 45px;
@@ -95,7 +114,7 @@ section {
       float: right;
     }
   }
-  .panel-body {
+  & > .panel-collapse > .panel-body {
     padding: 30px 80px;
   }
 
