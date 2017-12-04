@@ -4,16 +4,13 @@
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-
 body
   font-family: $font-roboto
   color: #333
   font-size: 13px
 
-
 section
   padding: 30px 0
-
 
 .heading
   margin-bottom: 30px
@@ -21,52 +18,38 @@ section
   a
     display: inline-block
     vertical-align: middle
-  
   h2
     font-weight: 400
     font-size: 20px
     margin: 0
-  
   a
-    // font-size: 13px
     float: right
   
-
-
 .row
   &.space-10
     @include setRowSpace(10)
-  
   &.space-20
     @include setRowSpace(20)
-  
-
 
 .img-responsive
   width: 100%
 
-
 .hide-md
   display: none
-
 
 .text-center
   text-align: center
 
-
 .text-right
   text-align: right
 
-
 .text-gray
   color: $gray
-
 
 // Panel 
 .panel-group .panel
   border-radius: 0
   @include prefix(box-shadow, none)
-
 
 .panel-transparent
   border: 1px solid $light-gray
@@ -76,13 +59,9 @@ section
     h4
       margin: 0
       color: $color-default
-    
-  
-
 
 .panel-trans-body>.panel+.panel
   margin-top: -1px
-
 
 .panel-trans-body>.panel
   border: none
@@ -94,12 +73,10 @@ section
     padding: 16px 45px // padding-left: 45px
     &+.panel-collapse>.panel-body
       border: none
-    
     .panel-title
       font-size: 18px
       font-weight: 400
       line-height: 1
-    
     a
       @include clearLink($color-default)
       position: relative
@@ -109,19 +86,15 @@ section
         @include prefix(transform-origin, 50% 50%)
         @extend .vertical-center
         left: -25px
-      
       &.collapsed:after
         @include prefix(transform, translateY(-50%) rotate(90deg))
-      
     
     .nice-check-item
       width: 150px
       float: right
     
-  
   &>.panel-collapse>.panel-body
     padding: 30px 80px
-  
 
   &.disabled
     .panel-heading
@@ -130,20 +103,15 @@ section
       a
         cursor: not-allowed
 
-
 .nice-select .list
   max-height: 300px
   overflow: auto
 
-
 @include respondTo(tabletPortrait)
   body
     font-size: 13px
-  
   .hide-md
     display: block
-  
-
   .hide-sm
     display: none
   

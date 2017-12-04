@@ -239,7 +239,7 @@
                   .panel-heading
                     .row
                       .col-xs-6
-                        %h4 3. NON-Contracted Rooms Setup
+                        %h4 4. NON-Contracted Rooms Setup
                       .col-xs-6.text-right
                         %span.required-pre Required Field
                   .panel-body
@@ -287,6 +287,38 @@
                       .form-group
                         .col-sm-3.col-sm-offset-3
                           %a{href:"#"} + Add Another Room
+
+                .panel.panel-transparent.mb-25
+                  .panel-heading
+                    .row
+                      .col-xs-6
+                        %h4 5. Release Room
+                      .col-xs-6.text-right
+                        %span.required-pre Required Field
+                  .panel-body
+                    %form.form-horizontal
+                      .form-group
+                        %label.col-sm-3.control-label
+                          %strong Room #1
+                      .form-group
+                        %label.col-sm-3.control-label.required Days Before Event
+                        .col-sm-1
+                          %input.form-control{placeholder:""}
+                      .form-group
+                        %label.col-sm-3.control-label
+                          %span.required Rule Applies To
+                          %small Released amount will apply to the unconsumed amount of rooms by the time of release.
+                        .col-sm-6
+                          %table.table.table-bordered
+                            %tr
+                              %th
+                                
+                              %th
+                          
+                      .form-group
+                        .col-sm-3.col-sm-offset-3
+                          %a{href:"#"} + Add Another Room
+
 
           .panel.panel-default
             .panel-heading

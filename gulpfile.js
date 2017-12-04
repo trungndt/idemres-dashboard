@@ -6,7 +6,7 @@ var exec = require('gulp-exec');
 var coffee = require('gulp-coffee');
 
 gulp.task('sass', function() {
-  return gulp.src(['assets/scss/**/*.scss'])
+  return gulp.src(['assets/sass/**/*.sass'])
     .pipe(sass())
     .on('error', onError)
     .pipe(gulp.dest('assets/css'))
@@ -37,7 +37,7 @@ gulp.task('coffee', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('assets/scss/**/*.scss', ['sass']);
+  gulp.watch('assets/sass/**/*.sass', ['sass']);
   gulp.watch('assets/coffee/**/*.coffee', ['coffee']);
   // Other watchers
   gulp.watch('haml/**/*.haml', ['haml']);
