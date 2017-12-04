@@ -1,0 +1,70 @@
+.home
+	#main
+		#sidebar
+			width: 200px
+			height: 665px
+			background-color: $color-primary
+			position: fixed
+			top: 16%
+			z-index: 9
+			li
+				list-style-type: none
+			
+			a
+				color: #fff 
+			
+			.sidebar
+				.main-menu
+					padding: 0
+					.active
+						background-color: $blue
+					
+					.sub-menu ul>li
+						&>a
+							padding: 8px 20px 8px 10px
+							display: block
+						
+						&:first-child>a
+							padding-top: 14px
+						
+
+					
+					.child-menu
+						background-color: $blackBlue
+						a
+							color: $gray
+							&:hover
+								color: #fff
+							
+						
+					
+				
+				.main-menu>li>a
+					padding: 14px 20px 14px 50px
+			    display: block
+			    font-weight: 500
+			    position: relative
+				
+			
+		
+		#content
+			padding-left: 200px
+			h1
+				font-size: 20px
+			
+			.content-header
+				padding-left: 20px
+				.btn-info
+					background-color: $blue
+				
+				.nice-select
+					float: none
+					display: table
+				
+				.form-control
+					border-radius: 5px
+					width: auto
+				
+			
+		
+	
