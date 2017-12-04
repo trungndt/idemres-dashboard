@@ -1,34 +1,33 @@
 // /// <reference path="../globals/_scut.scss" />
 // /// <reference path="../globals/_variables.scss" />
 // .icon
-//   display: inline-block
-//   &.icon-arrow-down
-//     width: 15px
-//     height: 8px
-//     @include bgImage('../images/icon/chevron-down.png', 0 0, 100% 100%)
-//   
-//   &.icon-zoomin
-//     width: 15px
-//     height: 15px
-//     @include bgImage('../images/icon/icon-zoomin.png', 0 0, 100% 100%)
-//   
-//   &.icon-guest
-//     width: 11px
-//     height: 10px
-//     @include bgImage('../images/icon/icon-guest.png', 0 0, 100% 100%)
-//   
+//	 display: inline-block
+//	 &.icon-arrow-down
+//		 width: 15px
+//		 height: 8px
+//		 @include bgImage('../images/icon/chevron-down.png', 0 0, 100% 100%)
+//	 
+//	 &.icon-zoomin
+//		 width: 15px
+//		 height: 15px
+//		 @include bgImage('../images/icon/icon-zoomin.png', 0 0, 100% 100%)
+//	 
+//	 &.icon-guest
+//		 width: 11px
+//		 height: 10px
+//		 @include bgImage('../images/icon/icon-guest.png', 0 0, 100% 100%)
+//	 
 // 
 
 
 .btn
-  @include transition()
-  height: $btnHeight
-  padding: 7px 15px
-  border-radius: $formRadius
-  &:active
-  	@include prefix(box-shadow, none)
-  
-
+	@include transition()
+	height: $btnHeight
+	padding: 8px 15px
+	border-radius: $formRadius
+	&:active
+		@include prefix(box-shadow, none)
+	
 
 a
 	color: $color-info
@@ -37,98 +36,84 @@ a
 		text-decoration: none
 	
 
-
 button, a
-  &, &:focus, &:active
-    outline: none !important
-  
-
-
-// .control-group
-//   .btn
-//     min-width: 130px
-//   
-//   .btn + .btn
-//     margin-left: 15px
-//   
-// 
+	&, &:focus, &:active
+		outline: none !important
+	
 
 .btn-info
-  background-color: $color-info
-  border: none
-  &:hover,
-  &:active,
-  &:hover:active,
-  &:focus
-    background-color: $color-info-darker
-  
-
+	background-color: $color-info
+	border: none
+	&:hover,
+	&:active,
+	&:hover:active,
+	&:focus
+		background-color: $color-info-darker
+	
+.btn-gray
+	background-color: $color-default
+	color: #fff
+	border: none
+	&:hover,
+	&:active,
+	&:hover:active,
+	&:focus
+		background-color: $color-default-darker
+		color: #fff
 
 // .btn-info-bordered
-//   background-color: transparent
-//   border: 1px solid $color-info
-//   color: $color-info
-//   &:hover,
-//   &:active,
-//   &:hover:active,
-//   &:focus
-//     background-color: $color-info
-//     color: #fff
-//   
+//	 background-color: transparent
+//	 border: 1px solid $color-info
+//	 color: $color-info
+//	 &:hover,
+//	 &:active,
+//	 &:hover:active,
+//	 &:focus
+//		 background-color: $color-info
+//		 color: #fff
+//	 
 // 
 
-// .btn-gray
-//   background-color: $color-default
-//   color: #fff
-//   border: none
-//   &:hover,
-//   &:active,
-//   &:hover:active,
-//   &:focus
-//     background-color: $color-default-darker
-//     color: #fff
-//   
-// 
 
 // .text-default
-//   color: $color-default
+//	 color: $color-default
 // 
 // .text-info
-//   color: $color-info
+//	 color: $color-info
 // 
 // .fw-600
-//   font-weight: 600
+//	 font-weight: 600
 // 
 // .text-bold
-//   font-weight: 700
+//	 font-weight: 700
 // 
 
 // .nice-select.select-white
-//   color: #000
-//   // border: none
-//   height: 30px
-//   line-height: 30px
-//   padding-left: 10px
-//   padding-right: 40px
-//   float: none
-//   border-radius: $formRadius
-//   @include prefix(box-shadow, 0 2px 3px rgba(#e0e0e0, .5) inset)
-//   &:after
-//     width: 14px
-//     height: 9px
-//     // top: 40%
-//     right: 8px
-//     border: none
-//     @include prefix(transform-origin, 0)
-//     @include prefix(transform, none)
-//     @include bgImage('../images/icon/chevron-down.png', 0 0, 100% 100%)
-//   
-//   .option.selected
-//     font-weight: 500
-//   
-//   .list
-//     width: 100%
-//   
+//	 color: #000
+//	 // border: none
+//	 height: 30px
+//	 line-height: 30px
+//	 padding-left: 10px
+//	 padding-right: 40px
+//	 float: none
+//	 border-radius: $formRadius
+//	 @include prefix(box-shadow, 0 2px 3px rgba(#e0e0e0, .5) inset)
+//	 &:after
+//		 width: 14px
+//		 height: 9px
+//		 // top: 40%
+//		 right: 8px
+//		 border: none
+//		 @include prefix(transform-origin, 0)
+//		 @include prefix(transform, none)
+//		 @include bgImage('../images/icon/chevron-down.png', 0 0, 100% 100%)
+//	 
+//	 .option.selected
+//		 font-weight: 500
+//	 
+//	 .list
+//		 width: 100%
+//	 
 // 
 .form-horizontal
 	.form-group
@@ -139,10 +124,10 @@ button, a
 		font-weight: 400
 		text-align: left
 		&.text-center
-		  text-align: center
+			text-align: center
 		
 		&.text-right
-		  text-align: right
+			text-align: right
 		
 
 		small
@@ -152,12 +137,12 @@ button, a
 			margin-top: 5px
 
 	.form-control
-	  border-radius: $formRadius
-	  border: 1px solid #e0e0e0
-	  height: $formHeight
-	  color: #333
-	  font-size: 12px
-	  @include prefix(box-shadow, 0 2px 3px rgba(#e0e0e0, .5) inset)
+		border-radius: $formRadius
+		border: 1px solid #e0e0e0
+		height: $formHeight
+		color: #333
+		font-size: 12px
+		@include prefix(box-shadow, 0 2px 3px rgba(#e0e0e0, .5) inset)
 
 	select.nice-select
 		display: none
@@ -165,17 +150,17 @@ button, a
 	.nice-select
 		@extend .form-control
 		padding-left: 12px
-		line-height: $formHeight - 2px
+		line-height: ($formHeight - 2px)
 		width: 100%
 		&:after
 			width: 15px
-      height: 8px
-      top: 11px
-      margin: 0
-      border: none
-      transform-origin: 50% 50%
-      @include transition
-			@include bgImage($url: '../images/icon/icon-arrow-down-dark.png', $size: 100% 100%)
+			height: 8px
+			top: 11px
+			margin: 0
+			border: none
+			transform-origin: 50% 50%
+			@include bgImage('../images/icon/icon-arrow-down-dark.png', 0 0, 100% 100%)
+			@include transition()
 			@include prefix(transform, none)
 		
 		&.open:after
@@ -186,7 +171,14 @@ button, a
 			line-height: $formHeight
 			&.selected
 				font-weight: 400
-			
+
+
+.btn-inline
+	min-width: 100px;
+.btn-inline + .btn-inline
+	margin-left: 20px
+
+
 .btn-file
 	display: inline-block
 	position: relative

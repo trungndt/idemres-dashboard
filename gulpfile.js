@@ -29,10 +29,7 @@ gulp.task('haml', function() {
 gulp.task('coffee', function() {
   return gulp.src('assets/coffee/**/*.coffee')
     .pipe(coffee())
-    .on('error', function(err) {
-      console.log(err.toString());
-      this.emit('end');
-    })
+    .on('error', onError)
     .pipe(gulp.dest('assets/js'));
 });
 
