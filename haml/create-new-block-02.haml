@@ -1,0 +1,383 @@
+%html
+  %head
+    %title Kingsmen
+    %meta{charset:"utf-8"}
+    %meta{content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name:"viewport"}
+    %link{href:"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700", rel:"stylesheet"}
+    %link{href:"assets/plugins/jquery-ui/jquery-ui.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/timepicker/jquery.timepicker.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/nice-select/css/nice-select.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/image-dd/css/msdropdown/dd.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
+
+  %body.home
+    %header.container-fluid
+      .row.space-0
+        .col-sm-2
+          %a.logo{href:"/"}
+            %img.img-responsive{src:"assets/images/logo-sofitel.png"}
+        .col-sm-6
+          -# %form.navbar-form
+          -#   .form-group
+          -#     %input.form-control{type:"text", placeholder:"Search..."}
+        .col-sm-3.col-sm-offset-1
+          %a.logo-sub{href:"/"}
+            %img{src:"assets/images/sol.png"}
+            %span 
+              %strong Sofitel Singapore Resort
+              Carrina Yang
+    %section
+      .container
+        .heading
+          %h2 Create New Block
+          %a{href:"/"} Cancel and Go back
+        .step-group
+          %ul
+            %li
+              %a.btn{href:"#"} Enter Block Details
+            %li.active
+              %a.btn{href:"#"} Preview Details
+            %li
+              %a.btn{href:"#"} Preview Message
+        .panel-group.panel-trans-body.panel-static
+          -# Panel: Create Event
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %span
+                  Create Event
+                .pull-right.font-13
+                  %a{href:"#"} Change
+            .panel-collapse
+              .panel-body
+                %form.form-horizontal
+                  .form-group
+                    .col-sm-3 
+                      %strong Account Holder
+                    .col-sm-6 GABTOH
+                  .form-group
+                    .col-sm-3 
+                      %strong Event Reference
+                    .col-sm-6 DG435
+                  .form-group
+                    .col-sm-3 
+                      %strong Event Name
+                    .col-sm-6 \-
+                  .form-group
+                    .col-sm-3 
+                      %strong Event Type
+                    .col-sm-6 Dinner and Dance
+                  .form-group
+                    .col-sm-3 
+                      %strong No. of Participants
+                    .col-sm-6 100
+                  .form-group
+                    .col-sm-3 
+                      %strong Event Dates
+                    .col-sm-6
+                      %table.table.tbl-event-dates-preview
+                        %tbody
+                          %tr
+                            %td 12 Jun 2017
+                            %th From
+                            %td 6:00 PM
+                            %th To
+                            %td 9:00 PM
+                          %tr
+                            %td 13 Jun 2017
+                            %th From
+                            %td 6:00 PM
+                            %th To
+                            %td 9:00 PM
+                          %tr
+                            %td 14 Jun 2017
+                            %th From
+                            %td 6:00 PM
+                            %th To
+                            %td 9:00 PM
+
+          -# Panel: Create Room Block
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %span
+                  Room Block
+                .pull-right.font-13
+                  %a{href:"#"} Change
+            .panel-collapse
+              .panel-body
+                .panel.panel-transparent.mb-25
+                  .panel-heading
+                    .row
+                      .col-xs-6
+                        %h4 1. Setup
+                      .col-xs-6.text-right
+                        %a{href:"#"} Change
+                  .panel-body
+                    %form.form-horizontal
+                      .form-group
+                        .col-sm-3 Room Block Code
+                        .col-sm-6 46GE5
+                      .form-group
+                        .col-sm-3 Account Holder
+                        .col-sm-6 GABTOH
+                      .form-group
+                        .col-sm-3 Billing Setup
+                        .col-sm-6 master Billing, Collect Guest Credit Card Details
+                      .form-group
+                        .col-sm-3 Block Inclusion
+                        .col-sm-6 Regent Singapore’s 440 guest rooms, which include 46 suites with private balconies, are an elegant reflection of Singapore’s unique East meets West blend of cultures. Contemporary comforts meet with classic style in a soothing palette of neutral tones, graced with accents of gold and orange.
+
+                      .form-group
+                        .col-sm-3 Room Policies
+                        .col-sm-6 Regent Singapore’s 440 guest rooms, which include 46 suites with private balconies, are an elegant reflection of Singapore’s unique East meets West blend of cultures. Contemporary comforts meet with classic style in a soothing palette of neutral tones, graced with accents of gold and orange.
+
+                      .form-group
+                        .col-sm-3 Attachments
+                          %div
+                            %small Visible to Customers
+                        .col-sm-6 
+                          %table
+                            %tbody.tbl-attachments-preview
+                              %tr
+                                %td 4MB
+                                %td
+                                  %a{href: "#"} contract-ddmmyy.pdf
+                              %tr
+                                %td 3MB
+                                %td
+                                  %a{href: "#"} contract-ddmmyy.pdf
+                              %tr
+                                %td 6.2MB
+                                %td
+                                  %a{href: "#"} contract-ddmmyy.pdf
+                     
+                .panel.panel-transparent.mb-25
+                  .panel-heading
+                    .row
+                      .col-xs-6
+                        %h4 2. Contracted Rooming Dates
+                      .col-xs-6.text-right
+                        %a{href:"#"} Change
+                  .panel-body
+                    %form.form-horizontal
+                      .form-group
+                        .col-sm-3 Dates From
+                        .col-sm-6 
+                          %span 11 Jun 2017 
+                          %span.pl-20.pr-20 to
+                          %span 14 Jun 2017
+                      .form-group
+                        .col-sm-3 Total Nights
+                        .col-sm-6 3
+                      .form-group
+                        .col-sm-3 No. of Pre-Contract Nights
+                        .col-sm-6 2
+                      .form-group
+                        .col-sm-3 No. of Post-Contract Nights
+                        .col-sm-6 2
+
+                .panel.panel-transparent.mb-25
+                  .panel-heading
+                    .row
+                      .col-xs-6
+                        %h4 3. Contracted Rooms Setup
+                      .col-xs-6.text-right
+                        %a{href:"#"} Change
+                  .panel-body
+                    %form.form-horizontal
+                      .form-group
+                        .col-sm-3 
+                          %strong Room #1
+                      .form-group
+                        .col-sm-3 Room Type
+                        .col-sm-6 Room #1 Deluxe, Single
+                      .form-group
+                        .col-sm-3 No. of Rooms
+                        .col-sm-6 35
+                      .form-group
+                        .col-sm-3 Room Rates ($)
+                        .col-sm-6 S$180/night
+                      .form-group
+                        .col-sm-3 Room Inclusions
+                        .col-sm-6 
+                          %p Breakfast Included
+                          %p Free Parking
+                          %p Free Internet
+                          %p Unlimited mobile data with Handy phone
+                
+                .panel.panel-transparent.mb-25
+                  .panel-heading
+                    .row
+                      .col-xs-6
+                        %h4 4. NON-Contracted Rooms Setup
+                      .col-xs-6.text-right
+                        %a{href:"#"} Change
+                  .panel-body
+                    %form.form-horizontal
+                      .form-group
+                        .col-sm-3 
+                          %strong Room #A
+                      .form-group
+                        .col-sm-3 Room Type
+                        .col-sm-6 Room #A Deluxe, Single
+                      .form-group
+                        .col-sm-3 No. of Rooms
+                        .col-sm-4 Pre-contract: 20
+                        .col-sm-4 Post-contract: 20
+                      .form-group
+                        .col-sm-3 Non-Contracted Room Rates ($)
+                        .col-sm-4 Pre-contract: S$180/night
+                        .col-sm-4 Post-contract: S$180/night
+                      .form-group
+                        .col-sm-3 Room Inclusions
+                        .col-sm-6 
+                          %p Breakfast Included
+                          %p Free Parking
+                          %p Free Internet
+                          %p Unlimited mobile data with Handy phone
+
+                .panel.panel-transparent
+                  .panel-heading
+                    .row
+                      .col-xs-6
+                        %h4 5. Release Room
+                      .col-xs-6.text-right
+                        %a{href:"#"} Change
+                  .panel-body
+                    %form.form-horizontal
+                      .form-group
+                        .col-sm-3 
+                          %strong Room #A
+                      .form-group
+                        .col-sm-3 Days Before Event
+                        .col-sm-6 30
+                      .form-group
+                        .col-sm-3 Rule Applies To
+                        .col-sm-6
+                          %table.table.table-bordered.tbl-release-rule
+                            %thead
+                              %tr
+                                %td{style:"width: 70%"}
+                                  %small Rooms
+                                %td
+                                  %small
+                                    Unconsumed Rooms Released
+                            %tbody
+                              %tr
+                                %td Room #1 Deluxe, Single
+                                  .sub
+                                    %small Contracted dates
+                                %td.text-center
+                                  .form-inline 50%
+                              %tr
+                                %td PRE - Room #A Deluxe, Single
+                                  .sub
+                                    %small Contracted dates
+                                %td.text-center
+                                  .form-inline 50%
+                              %tr
+                                %td POST - Room #A Deluxe, Single
+                                  .sub
+                                    %small Contracted dates
+                                %td.text-center
+                                  .form-inline 50%
+
+          -# Panel: Assign Customer
+          .panel.panel-default
+            .panel-heading
+              %h4.panel-title
+                %span
+                  Assign Customer
+                .pull-right.font-13
+                  %a{href:"#"} Change
+            .panel-collapse
+              .panel-body
+                %form.form-horizontal
+                  .form-group
+                    .col-sm-3 First Name
+                    .col-sm-6 Sarah
+                  .form-group
+                    .col-sm-3 Last Name
+                    .col-sm-6 Yang
+                  .form-group
+                    .col-sm-3 Company Name
+                    .col-sm-6 Fast Co. Design
+                  .form-group
+                    .col-sm-3 Email Address
+                    .col-sm-6 sarah@fastco.design
+                  .form-group
+                    .col-sm-3 Phone Number
+                    .col-sm-6 +65 1234 1234
+                  
+                  .form-group.mt-30
+                    .col-sm-5.col-sm-offset-3
+                      %a.btn.btn-inline.btn-info{href:"#"} Save and Continue
+                      %a.btn.btn-inline.btn-gray{href:"#"} Back
+
+
+    -# %section#main
+    -#   %aside#sidebar
+    -#     .sidebar
+    -#       %ul.main-menu
+    -#         %li.sub-menu.active
+    -#           %a{href:"#"}
+    -#             %i 
+    -#             ALL EVENTS
+    -#         %li.sub-menu
+    -#           %a{href:"#"}
+    -#             %i 
+    -#             ALL GROUP RES.
+    -#         %li.sub-menu
+    -#           %a{href:"#"}
+    -#             %i 
+    -#             EVENT PLANNERS
+    -#         %li.sub-menu.toggled
+    -#           %a{href:"#"}
+    -#             %i 
+    -#             HOTEL SETTINGS
+    -#           %ul.child-menu
+    -#             %li
+    -#               %a Hotel Information
+    -#             %li
+    -#               %a Facilities
+    -#             %li
+    -#               %a Accommodation
+    -#             %li
+    -#               %a Reservation Setup
+    -#         %li.sub-menu.toggled
+    -#           %a{href:"#"}
+    -#             %i 
+    -#             REPORTS
+    -#           %ul.child-menu
+    -#             %li
+    -#               %a Events Report
+    -#             %li
+    -#               %a Attendees Report
+    -#             %li
+    -#               %a Conversion Report
+    -#             %li
+    -#               %a Email Campaigns
+    -#   %section#content
+    -#     .content-header
+    -#       %h1 All Events
+    -#       %a.btn.btn-info Add New Block
+    -#       %select.nice-select
+    -#         %option Filter by status
+    -#       .form-group
+    -#           %input.form-control{type:"text", placeholder:"Search event reference/name..."}
+    -#       .count-e-page
+    -#         Display 
+    -#         %select.nice-select
+    -#           %option 10
+    -#         per page
+
+
+%script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}
+%script{src:"assets/plugins/jquery-ui/jquery-ui.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/timepicker/jquery.timepicker.min.js", type:"text/javascript"}
+%script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/nice-select/js/jquery.nice-select.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/image-dd/js/msdropdown/jquery.dd.min.js", type:"text/javascript"}
+%script{src:"assets/js/sofitel.js", type:"text/javascript"}

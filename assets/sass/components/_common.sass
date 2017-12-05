@@ -9,6 +9,9 @@ body
 	color: #333
 	font-size: 13px
 
+table
+  font-size: 13px
+
 section
 	padding: 30px 0
 
@@ -63,49 +66,6 @@ small
 		h4
 			margin: 0
 			color: $color-default
-
-.panel-trans-body>.panel+.panel
-	margin-top: -1px
-
-.panel-trans-body>.panel
-	border: none
-	border-radius: 0
-	@include prefix(box-shadow, none)
-	&>.panel-heading
-		border: 1px solid $light-gray
-		border-radius: 0
-		padding: 16px 45px // padding-left: 45px
-		&+.panel-collapse>.panel-body
-			border: none
-		.panel-title
-			font-size: 18px
-			font-weight: 400
-			line-height: 1
-		a
-			@include clearLink($color-default)
-			position: relative
-			&:after
-				@include triangle('right', 7px, 7px, $color-primary)
-				@include transition
-				@include prefix(transform-origin, 50% 50%)
-				@extend .vertical-center
-				left: -25px
-			&.collapsed:after
-				@include prefix(transform, translateY(-50%) rotate(90deg))
-		
-		.nice-check-item
-			width: 150px
-			float: right
-		
-	&>.panel-collapse>.panel-body
-		padding: 30px 80px
-
-	&.disabled
-		.panel-heading
-			background-color: #eee
-			&,
-			a
-				cursor: not-allowed
 
 .nice-select .list
 	max-height: 300px

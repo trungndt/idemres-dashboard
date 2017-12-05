@@ -1,6 +1,58 @@
 
+/* Panel */
+.panel-trans-body>.panel+.panel
+	margin-top: -1px
+
+.panel-trans-body>.panel
+	border: none
+	border-radius: 0
+	@include prefix(box-shadow, none)
+	&>.panel-heading
+		border: 1px solid $light-gray
+		border-radius: 0
+		padding: 16px 45px // padding-left: 45px
+		&+.panel-collapse>.panel-body
+			border: none
+		.panel-title
+			font-size: 18px
+			font-weight: 400
+			line-height: 1
+		& > .panel-title > a
+			@include clearLink($color-default)
+			position: relative
+			&:after
+				@include triangle('right', 7px, 7px, $color-primary)
+				@include transition
+				@include prefix(transform-origin, 50% 50%)
+				@extend .vertical-center
+				left: -25px
+			&.collapsed:after
+				@include prefix(transform, translateY(-50%) rotate(90deg))
+		
+		.nice-check-item
+			width: 150px
+			float: right
+		
+	&>.panel-collapse>.panel-body
+		padding: 30px 80px
+
+	&.disabled
+		.panel-heading
+			background-color: #eee
+			&,
+			a
+				cursor: not-allowed
+
+.panel-trans-body.panel-static > .panel
+	.panel-heading
+		background-color: #fff
+		padding: 16px 50px 16px 20px
+		& > .panel-title
+			color: $color-default
+
 /* Tables */
 .table.tbl-release-rule
+	white-space: nowrap
 	.nice-check-item.row-check
 		display: inline-block
 		vertical-align: middle
@@ -15,8 +67,6 @@
 			margin-top: 5px
 			padding-left: 23px
 
-	.form-inline
-		white-space: nowrap
 	.room-release-amount
 		width: 50px
 	.room-release-unit
@@ -24,3 +74,17 @@
 		margin-left: 20px
 		float: none
 		display: inline-block
+
+.table.tbl-event-dates-preview
+	margin-bottom: 0
+	&>tbody>tr
+		&>td, &>th
+			border: none
+			padding: 0
+			line-height: 2
+
+.tbl-attachments-preview
+	tr:not(:last-child) td
+		padding-bottom: 15px
+	td:first-child
+		padding-right: 40px

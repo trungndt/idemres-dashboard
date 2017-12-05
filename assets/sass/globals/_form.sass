@@ -116,8 +116,12 @@ button, a
 //	 
 // 
 .form-horizontal
+	&:last-child
+		margin-bottom: 0
 	.form-group
 		@include setRowSpace(10)
+		&:last-child
+			margin-bottom: 0
 	
 	.control-label
 		font-size: 13px
