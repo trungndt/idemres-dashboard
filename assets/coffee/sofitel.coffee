@@ -3,6 +3,7 @@ $ ->
 	class General
 		@init: ->
 			$('.nice-select').niceSelect()
+			$('.image-dd').msDropDown()
 			do this.setupDatePicker
 			do this.setupTimePicker
 			return

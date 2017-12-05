@@ -8,6 +8,7 @@
     %link{href:"assets/plugins/timepicker/jquery.timepicker.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/plugins/nice-select/css/nice-select.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/image-dd/css/msdropdown/dd.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
 
   %body.home
@@ -127,12 +128,12 @@
           .panel.panel-default
             .panel-heading
               %h4.panel-title
-                %a{href:"#collapseTwo",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"true"}
+                %a.collapsed{href:"#collapseTwo",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"false"}
                   Create Room Block
                 .nice-check-item
                   %input.nice-check.nice-check-sm#ckbNoRoomBlock{type:"checkbox", name:"",data-action:"disable-accordion"}
                   %label.font-13{for:"ckbNoRoomBlock"} No Room Block
-            .panel-collapse.collapse.in#collapseTwo
+            .panel-collapse.collapse#collapseTwo
               .panel-body
                 .panel.panel-transparent.mb-25
                   .panel-heading
@@ -370,14 +371,55 @@
                    %a.btn.btn-info.btn-inline{href:"#collapseThree",data-toggle:"collapse",data-parent:"#accordion",data-action:"complete-step"} Continue
                     %a.btn.btn-gray.btn-inline{href:"#collapseOne",data-toggle:"collapse",data-parent:"#accordion",data-action:"complete-step"} Back
 
-
+          -# Panel: Assign Customer
           .panel.panel-default
             .panel-heading
               %h4.panel-title
-                %a.collapsed{href:"#collapseThree",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"false"}
+                %a{href:"#collapseThree",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"true"}
                   Assign Customer
-            .panel-collapse.collapse#collapseThree
+            .panel-collapse.collapse.in#collapseThree
               .panel-body
+                .mb-30
+                  Send an invitation to collaborate with the event planner of this event. This planner will be able to set up the event website and registration for public view.
+                %form.form-horizontal
+                  .form-group
+                    %label.col-sm-3.col-sm-offset-2.control-label.required-pre Required Field
+                  .form-group
+                    %label.col-sm-2.control-label.required First Name
+                    .col-sm-6
+                      %input.form-control{placeholder:""}
+                  .form-group
+                    %label.col-sm-2.control-label.required Last Name
+                    .col-sm-6
+                      %input.form-control{placeholder:""}
+                  .form-group
+                    %label.col-sm-2.control-label Company Name
+                    .col-sm-6
+                      %input.form-control{placeholder:""}
+                  .form-group
+                    %label.col-sm-2.control-label.required Email Address
+                    .col-sm-6
+                      %input.form-control{placeholder:"",type:"email"}
+                  .form-group
+                    %label.col-sm-2.control-label Phone Number
+                    .col-sm-6
+                      %input.form-control{placeholder:"",type:"phone"}
+                  .form-group
+                    %label.col-sm-2.control-label.required Event Type
+                    .col-sm-4
+                      .input-group
+                        .input-group-btn
+                          %select.image-dd
+                            %option{value:"+65",data-image:"assets/images/flag/flag-sing.png"}
+                            %option{value:"+99",data-image:"assets/images/flag/flag-uk.png"}
+                        %input{placeholder:"",type:"phone"}
+                    .col-sm-3
+                      %input.form-control#txtOtherEvent{placeholder:"Other event type", style:"display:none"}
+                 
+                  .form-group.mt-30
+                    .col-sm-5.col-sm-offset-2
+                      %a.btn.btn-inline.btn-info{href:"#"} Preview Block Setup
+                      %a.btn.btn-inline.btn-gray{href:"#collapseTwo",data-toggle:"collapse",data-parent:"#accordion"} Back
 
 
     -# %section#main
@@ -442,4 +484,5 @@
 %script{src:"assets/plugins/timepicker/jquery.timepicker.min.js", type:"text/javascript"}
 %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", type:"text/javascript"}
 %script{src:"assets/plugins/nice-select/js/jquery.nice-select.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/image-dd/js/msdropdown/jquery.dd.min.js", type:"text/javascript"}
 %script{src:"assets/js/sofitel.js", type:"text/javascript"}

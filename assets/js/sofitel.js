@@ -6,6 +6,7 @@
 
       General.init = function() {
         $('.nice-select').niceSelect();
+        $('.image-dd').msDropDown();
         this.setupDatePicker();
         this.setupTimePicker();
       };

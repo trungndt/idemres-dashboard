@@ -169,8 +169,61 @@ button, a
 				font-weight: 400
 
 
+.image-dd
+	min-width: 50px
+.dd
+	border: none
+	cursor: pointer
+	&:focus
+		outline: none
+	.ddTitle
+		background: none
+		.ddlabel, .description
+			display: none
+		.ddTitleText
+			padding: 0
+			display: inline-block
+			border-radius: 2px
+			overflow: hidden
+			border: 1px solid rgba(#2F343A, .1)
+			img
+				padding: 0
+	.divider
+		display: none
+	.ddArrow
+		width: 15px
+		height: 8px
+		margin-top: -4px
+		transform-origin: 50% 50%
+		@include transition()
+		@include bgImage('../images/icon/icon-arrow-down-dark.png', 0 0, 100% 100%)
+	&.borderRadiusTp .ddArrow
+		@include prefix(transform, rotate(180deg))
+	.ddChild
+		height: auto !important
+		top: 21px !important
+		left: -5px
+		li
+			border: none
+			cursor: pointer
+
+.input-group
+	@extend .form-control
+	padding: 4px 15px
+	input
+		border: none
+		display: table-cell
+		width: 100%
+		padding-left: 15px
+		height: 20px
+		&:focus
+			outline: none
+
 .btn-inline
 	min-width: 100px;
+	&.btn
+		padding-left: 30px
+		padding-right: 30px
 .btn-inline + .btn-inline
 	margin-left: 20px
 

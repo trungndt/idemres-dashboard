@@ -846,7 +846,7 @@ button, button:focus, button:active, a, a:focus, a:active {
     display: block;
     margin-top: 5px; }
 
-.form-horizontal .form-control, .form-horizontal .nice-select {
+.form-horizontal .form-control, .form-horizontal .nice-select, .form-horizontal .input-group {
   border-radius: 5px;
   border: 1px solid #e0e0e0;
   height: 30px;
@@ -895,8 +895,69 @@ button, button:focus, button:active, a, a:focus, a:active {
     .form-horizontal .nice-select .option.selected {
       font-weight: 400; }
 
+.image-dd {
+  min-width: 50px; }
+
+.dd {
+  border: none;
+  cursor: pointer; }
+  .dd:focus {
+    outline: none; }
+  .dd .ddTitle {
+    background: none; }
+    .dd .ddTitle .ddlabel, .dd .ddTitle .description {
+      display: none; }
+    .dd .ddTitle .ddTitleText {
+      padding: 0;
+      display: inline-block;
+      border-radius: 2px;
+      overflow: hidden;
+      border: 1px solid rgba(47, 52, 58, 0.1); }
+      .dd .ddTitle .ddTitleText img {
+        padding: 0; }
+  .dd .divider {
+    display: none; }
+  .dd .ddArrow {
+    width: 15px;
+    height: 8px;
+    margin-top: -4px;
+    transform-origin: 50% 50%;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    background: url("../images/icon/icon-arrow-down-dark.png") 0 0/100% 100% no-repeat; }
+  .dd.borderRadiusTp .ddArrow {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .dd .ddChild {
+    height: auto !important;
+    top: 21px !important;
+    left: -5px; }
+    .dd .ddChild li {
+      border: none;
+      cursor: pointer; }
+
+.input-group {
+  padding: 4px 15px; }
+  .input-group input {
+    border: none;
+    display: table-cell;
+    width: 100%;
+    padding-left: 15px;
+    height: 20px; }
+    .input-group input:focus {
+      outline: none; }
+
 .btn-inline {
   min-width: 100px; }
+  .btn-inline.btn {
+    padding-left: 30px;
+    padding-right: 30px; }
 
 .btn-inline + .btn-inline {
   margin-left: 20px; }
@@ -923,11 +984,11 @@ button, button:focus, button:active, a, a:focus, a:active {
   display: inline-block;
   margin-right: 3px; }
 
-.form-control.icon-left, .form-horizontal .icon-left.nice-select {
+.form-control.icon-left, .form-horizontal .icon-left.nice-select, .icon-left.input-group {
   padding-left: 32px; }
-  .form-control.icon-left.date-picker, .form-horizontal .icon-left.date-picker.nice-select {
+  .form-control.icon-left.date-picker, .form-horizontal .icon-left.date-picker.nice-select, .icon-left.date-picker.input-group {
     background: url("../images/icon/icon-calendar.png") 9px 50%/auto 12px no-repeat; }
-  .form-control.icon-left.time-picker, .form-horizontal .icon-left.time-picker.nice-select {
+  .form-control.icon-left.time-picker, .form-horizontal .icon-left.time-picker.nice-select, .icon-left.time-picker.input-group {
     background: url("../images/icon/icon-time.png") 9px 50%/auto 14px no-repeat; }
 
 /* Tables */
@@ -1137,7 +1198,7 @@ header {
 .navbar-form {
   padding: 13px 15px;
   margin: 0; }
-  .navbar-form .form-group, .navbar-form .form-control, .navbar-form .form-horizontal .nice-select, .form-horizontal .navbar-form .nice-select {
+  .navbar-form .form-group, .navbar-form .form-control, .navbar-form .form-horizontal .nice-select, .form-horizontal .navbar-form .nice-select, .navbar-form .input-group {
     width: 100%;
     border-radius: 30px; }
 
@@ -1245,6 +1306,6 @@ header {
     .home #main #content .content-header .nice-select {
       float: none;
       display: table; }
-    .home #main #content .content-header .form-control, .home #main #content .content-header .form-horizontal .nice-select, .form-horizontal .home #main #content .content-header .nice-select {
+    .home #main #content .content-header .form-control, .home #main #content .content-header .form-horizontal .nice-select, .form-horizontal .home #main #content .content-header .nice-select, .home #main #content .content-header .input-group {
       border-radius: 5px;
       width: auto; }
