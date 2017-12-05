@@ -843,9 +843,7 @@ button, button:focus, button:active, a, a:focus, a:active {
   .form-horizontal .control-label.text-right {
     text-align: right; }
   .form-horizontal .control-label small {
-    color: #777777;
     display: block;
-    font-size: 11px;
     margin-top: 5px; }
 
 .form-horizontal .form-control, .form-horizontal .nice-select {
@@ -932,6 +930,14 @@ button, button:focus, button:active, a, a:focus, a:active {
   .form-control.icon-left.time-picker, .form-horizontal .icon-left.time-picker.nice-select {
     background: url("../images/icon/icon-time.png") 9px 50%/auto 14px no-repeat; }
 
+/* Tables */
+.table {
+  font-size: 13px; }
+  .table > thead > tr > td {
+    background-color: #efefef;
+    font-size: 11px;
+    font-weight: normal; }
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -985,6 +991,10 @@ section {
 
 .text-gray {
   color: #AAA; }
+
+small {
+  font-size: 11px;
+  color: #777777; }
 
 .panel-group .panel {
   border-radius: 0;
@@ -1164,6 +1174,33 @@ header {
     .step-group ul .active ~ li .btn {
       border-color: #AAA;
       color: #AAA; }
+
+/* Tables */
+.table.tbl-release-rule .nice-check-item.row-check {
+  display: inline-block;
+  vertical-align: middle; }
+  .table.tbl-release-rule .nice-check-item.row-check .nice-check + label {
+    margin-bottom: 0;
+    font-weight: 400; }
+  .table.tbl-release-rule .nice-check-item.row-check + small {
+    display: inline-block;
+    line-height: 15px;
+    vertical-align: middle; }
+  .table.tbl-release-rule .nice-check-item.row-check + .sub {
+    margin-top: 5px;
+    padding-left: 23px; }
+
+.table.tbl-release-rule .form-inline {
+  white-space: nowrap; }
+
+.table.tbl-release-rule .room-release-amount {
+  width: 50px; }
+
+.table.tbl-release-rule .room-release-unit {
+  width: 90px;
+  margin-left: 20px;
+  float: none;
+  display: inline-block; }
 
 .home #main #sidebar {
   width: 200px;

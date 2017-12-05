@@ -309,15 +309,62 @@
                           %span.required Rule Applies To
                           %small Released amount will apply to the unconsumed amount of rooms by the time of release.
                         .col-sm-6
-                          %table.table.table-bordered
-                            %tr
-                              %th
-                                
-                              %th
+                          %table.table.table-bordered.tbl-release-rule
+                            %thead
+                              %tr
+                                %td{style:"width: 70%"}
+                                  .nice-check-item.row-check
+                                    %input.nice-check.nice-check-sm#ckbSelectAll{type:"checkbox"}
+                                    %label{for:"ckbSelectAll"}
+                                  %small Rooms
+                                %td
+                                  %small
+                                    Unconsumed Rooms Released
+                            %tbody
+                              %tr
+                                %td
+                                  .nice-check-item.row-check
+                                    %input.nice-check.nice-check-sm#ckbSelectRoom1{type:"checkbox"}
+                                    %label{for:"ckbSelectRoom1"} Room #1 Deluxe, Single
+                                  .sub
+                                    %small Contracted dates
+                                %td
+                                  .form-inline
+                                    %input.form-control.room-release-amount{type:"text",value:"50"}
+                                    %select.nice-select.room-release-unit
+                                      %option{selected:"selected",value:"percent"} %
+                                      %option{value:"Award Ceremony"} USD
+                              %tr
+                                %td
+                                  .nice-check-item.row-check
+                                    %input.nice-check.nice-check-sm#ckbSelectRoom2{type:"checkbox"}
+                                    %label{for:"ckbSelectRoom2"} PRE - Room #A Deluxe, Single
+                                  .sub
+                                    %small Non-contracted dates
+                                %td
+                                  .form-inline
+                                    %input.form-control.room-release-amount{type:"text",value:"50"}
+                                    %select.nice-select.room-release-unit
+                                      %option{selected:"selected",value:"percent"} %
+                                      %option{value:"Award Ceremony"} USD
+                              %tr
+                                %td
+                                  .nice-check-item.row-check
+                                    %input.nice-check.nice-check-sm#ckbSelectRoom3{type:"checkbox"}
+                                    %label{for:"ckbSelectRoom3"} POST - Room #A Deluxe, Single
+                                  .sub
+                                    %small Non-contracted dates
+                                %td
+                                  .form-inline
+                                    %input.form-control.room-release-amount{type:"text",value:"50"}
+                                    %select.nice-select.room-release-unit
+                                      %option{selected:"selected",value:"percent"} %
+                                      %option{value:"Award Ceremony"} USD
+
                           
                       .form-group
                         .col-sm-3.col-sm-offset-3
-                          %a{href:"#"} + Add Another Room
+                          %a{href:"#"} + Add Another Rule
 
                 .text-center.mt-30
                    %a.btn.btn-info.btn-inline{href:"#collapseThree",data-toggle:"collapse",data-parent:"#accordion",data-action:"complete-step"} Continue
