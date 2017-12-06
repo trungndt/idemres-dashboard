@@ -115,6 +115,14 @@ button, a
 //		 width: 100%
 //	 
 // 
+.form-control
+	border-radius: $formRadius
+	border: 1px solid #e0e0e0
+	height: $formHeight
+	color: #333
+	font-size: 12px
+	@include prefix(box-shadow, 0 2px 3px rgba(#e0e0e0, .5) inset)
+
 .form-horizontal
 	&:last-child
 		margin-bottom: 0
@@ -135,14 +143,6 @@ button, a
 		small
 			display: block
 			margin-top: 5px
-
-	.form-control
-		border-radius: $formRadius
-		border: 1px solid #e0e0e0
-		height: $formHeight
-		color: #333
-		font-size: 12px
-		@include prefix(box-shadow, 0 2px 3px rgba(#e0e0e0, .5) inset)
 
 	select.nice-select
 		display: none
@@ -176,6 +176,7 @@ button, a
 .image-dd
 	min-width: 50px
 .dd
+	width: 50px !important
 	border: none
 	cursor: pointer
 	&:focus

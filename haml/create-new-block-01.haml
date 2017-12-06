@@ -45,12 +45,12 @@
           .panel.panel-default
             .panel-heading
               %h4.panel-title
-                %a.collapsed{href:"#collapseOne",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"false"}
+                %a{href:"#collapseOne",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"true"}
                   Create Event
                 .nice-check-item
                   %input.nice-check.nice-check-sm#ckbNoEvent{type:"checkbox", name:"",data-action:"disable-accordion"}
                   %label.font-13{for:"ckbNoEvent"} No Event
-            .panel-collapse.collapse#collapseOne
+            .panel-collapse.collapse.in#collapseOne
               .panel-body
                 .create-event
                   %form.form-horizontal
@@ -163,6 +163,19 @@
                             %label{for:"ckbCollectCardDetails"} Collect Guest Credit Card Details
                       .form-group
                         %label.col-sm-3.control-label
+                          %span Block Inclusions
+                          %small Applies to all contracted rooms within this block. Visible on reservations booking website.
+                        .col-sm-6
+                          %textarea.form-control{rows:"4"}
+                      .form-group
+                        %label.col-sm-3.control-label
+                          %span.required Room Policies
+                          %small E.g. Cancellations, refunds, extra charges.
+                            %br Visible on reservations booking website.
+                        .col-sm-6
+                          %textarea.form-control{rows:"4"}
+                      .form-group
+                        %label.col-sm-3.control-label
                           %span Attachments
                           %small Visible to Customers
                         .col-sm-6
@@ -232,6 +245,12 @@
                         .col-sm-1
                           %input.form-control{placeholder:""}
                         %label.col-sm-1.control-label \/night
+                      .form-group
+                        %label.col-sm-3.control-label
+                          %span Block Inclusions
+                          %small Applies to this particular room only. Visible on reservations booking website.
+                        .col-sm-6
+                          %textarea.form-control{rows:"4"}
                       .form-group
                         .col-sm-3.col-sm-offset-3
                           %a{href:"#"} + Add Another Room
@@ -375,9 +394,9 @@
           .panel.panel-default
             .panel-heading
               %h4.panel-title
-                %a{href:"#collapseThree",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"true"}
+                %a.collapsed{href:"#collapseThree",data-toggle:"collapse",data-parent:"#accordion",aria-expanded:"false"}
                   Assign Customer
-            .panel-collapse.collapse.in#collapseThree
+            .panel-collapse.collapse#collapseThree
               .panel-body
                 .mb-30
                   Send an invitation to collaborate with the event planner of this event. This planner will be able to set up the event website and registration for public view.

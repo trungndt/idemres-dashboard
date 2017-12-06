@@ -827,6 +827,18 @@ button, button:focus, button:active, a, a:focus, a:active {
     background-color: #5e5e5e;
     color: #fff; }
 
+.form-control, .form-horizontal .nice-select, .input-group {
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  height: 30px;
+  color: #333;
+  font-size: 12px;
+  -webkit-box-shadow: 0 2px 3px rgba(224, 224, 224, 0.5) inset;
+  -moz-box-shadow: 0 2px 3px rgba(224, 224, 224, 0.5) inset;
+  -ms-box-shadow: 0 2px 3px rgba(224, 224, 224, 0.5) inset;
+  -o-box-shadow: 0 2px 3px rgba(224, 224, 224, 0.5) inset;
+  box-shadow: 0 2px 3px rgba(224, 224, 224, 0.5) inset; }
+
 .form-horizontal:last-child {
   margin-bottom: 0; }
 
@@ -850,18 +862,6 @@ button, button:focus, button:active, a, a:focus, a:active {
   .form-horizontal .control-label small {
     display: block;
     margin-top: 5px; }
-
-.form-horizontal .form-control, .form-horizontal .nice-select, .form-horizontal .input-group {
-  border-radius: 5px;
-  border: 1px solid #e0e0e0;
-  height: 30px;
-  color: #333;
-  font-size: 12px;
-  -webkit-box-shadow: 0 2px 3px rgba(224, 224, 224, 0.5) inset;
-  -moz-box-shadow: 0 2px 3px rgba(224, 224, 224, 0.5) inset;
-  -ms-box-shadow: 0 2px 3px rgba(224, 224, 224, 0.5) inset;
-  -o-box-shadow: 0 2px 3px rgba(224, 224, 224, 0.5) inset;
-  box-shadow: 0 2px 3px rgba(224, 224, 224, 0.5) inset; }
 
 .form-horizontal select.nice-select {
   display: none; }
@@ -904,6 +904,7 @@ button, button:focus, button:active, a, a:focus, a:active {
   min-width: 50px; }
 
 .dd {
+  width: 50px !important;
   border: none;
   cursor: pointer; }
   .dd:focus {
