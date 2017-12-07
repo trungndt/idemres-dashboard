@@ -1,0 +1,80 @@
+%html
+  %head
+    %title Kingsmen
+    %meta{charset:"utf-8"}
+    %meta{content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name:"viewport"}
+    %link{href:"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700", rel:"stylesheet"}
+    %link{href:"assets/plugins/jquery-ui/jquery-ui.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/timepicker/jquery.timepicker.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/nice-select/css/nice-select.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/image-dd/css/msdropdown/dd.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
+
+  %body.home
+    %header.container-fluid
+      .row.space-0
+        .col-sm-2
+          %a.logo{href:"/"}
+            %img.img-responsive{src:"assets/images/logo-sofitel.png"}
+        .col-sm-6
+          -# %form.navbar-form
+          -#   .form-group
+          -#     %input.form-control{type:"text", placeholder:"Search..."}
+        .col-sm-3.col-sm-offset-1
+          %a.logo-sub{href:"/"}
+            %img{src:"assets/images/sol.png"}
+            %span 
+              %strong Sofitel Singapore Resort
+              Carrina Yang
+    %section
+      .container
+        .heading
+          %h2 Create New Block
+          %a{href:"/"} Cancel and Go back
+        .step-group
+          %ul
+            %li
+              %a.btn{href:"#"} Enter Block Details
+            %li
+              %a.btn{href:"#"} Preview Details
+            %li.active
+              %a.btn{href:"#"} Preview Message
+        %br
+        .panel-body.bg-info.mb-30
+          Block created! Public reservation link here:&nbsp;
+          %a{href:"#"} http://reservations.site
+
+        .row
+          .col-sm-10.col-sm-offset-1
+            %form.form-horizontal.mb-30
+              .form-group
+                %label.col-sm-2.control-label To:
+                .col-sm-8
+                  %input.form-control{placeholder:""}
+              .form-group
+                %label.col-sm-2.control-label CC:
+                .col-sm-8
+                  %input.form-control{placeholder:""}
+              .form-group
+                %label.col-sm-2.control-label Subject:
+                .col-sm-8
+                  %input.form-control{placeholder:""}
+              .form-group
+                %label.col-sm-2.control-label
+                  %span Message:
+                  %small Optional
+                .col-sm-8
+                  %textarea.form-control{rows:"4"}
+
+        %h4.text-default Preview Email
+
+      %hr
+
+%script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}
+%script{src:"assets/plugins/jquery-ui/jquery-ui.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/timepicker/jquery.timepicker.min.js", type:"text/javascript"}
+%script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/nice-select/js/jquery.nice-select.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/image-dd/js/msdropdown/jquery.dd.min.js", type:"text/javascript"}
+%script{src:"assets/js/sofitel.js", type:"text/javascript"}
