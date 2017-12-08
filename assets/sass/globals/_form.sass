@@ -1,24 +1,33 @@
 // /// <reference path="../globals/_scut.scss" />
 // /// <reference path="../globals/_variables.scss" />
-// .icon
-//	 display: inline-block
-//	 &.icon-arrow-down
-//		 width: 15px
-//		 height: 8px
-//		 @include bgImage('../images/icon/chevron-down.png', 0 0, 100% 100%)
-//	 
-//	 &.icon-zoomin
-//		 width: 15px
-//		 height: 15px
-//		 @include bgImage('../images/icon/icon-zoomin.png', 0 0, 100% 100%)
-//	 
-//	 &.icon-guest
-//		 width: 11px
-//		 height: 10px
-//		 @include bgImage('../images/icon/icon-guest.png', 0 0, 100% 100%)
-//	 
-// 
-
+.icon
+	display: inline-block
+	&.icon-arrow-down
+		width: 15px
+		height: 8px
+		@include bgImage('../images/icon/chevron-down.png', 0 0, 100% 100%)
+	
+	$sidebarIconSize: 15px
+	&.icon-gift
+		width: $sidebarIconSize
+		height: $sidebarIconSize
+		@include bgImage($url: '../images/icon/icon-gift.png', $size: auto auto)
+	&.icon-bed
+		width: $sidebarIconSize
+		height: $sidebarIconSize
+		@include bgImage($url: '../images/icon/icon-bed.png', $size: auto auto)
+	&.icon-people
+		width: $sidebarIconSize
+		height: $sidebarIconSize
+		@include bgImage($url: '../images/icon/icon-people.png', $size: auto auto)
+	&.icon-briefcase
+		width: $sidebarIconSize
+		height: $sidebarIconSize
+		@include bgImage($url: '../images/icon/icon-briefcase.png', $size: auto auto)
+	&.icon-chart
+		width: $sidebarIconSize
+		height: $sidebarIconSize
+		@include bgImage($url: '../images/icon/icon-chart.png', $size: auto auto)
 
 .btn
 	@include transition()
@@ -62,58 +71,58 @@ button, a
 		color: #fff
 
 // .btn-info-bordered
-//	 background-color: transparent
-//	 border: 1px solid $color-info
-//	 color: $color-info
-//	 &:hover,
-//	 &:active,
-//	 &:hover:active,
-//	 &:focus
-//		 background-color: $color-info
-//		 color: #fff
-//	 
+//	background-color: transparent
+//	border: 1px solid $color-info
+//	color: $color-info
+//	&:hover,
+//	&:active,
+//	&:hover:active,
+//	&:focus
+//		background-color: $color-info
+//		color: #fff
+//	
 // 
 
 
 // .text-default
-//	 color: $color-default
+//	color: $color-default
 // 
 // .text-info
-//	 color: $color-info
+//	color: $color-info
 // 
 // .fw-600
-//	 font-weight: 600
+//	font-weight: 600
 // 
 // .text-bold
-//	 font-weight: 700
+//	font-weight: 700
 // 
 
 // .nice-select.select-white
-//	 color: #000
-//	 // border: none
-//	 height: 30px
-//	 line-height: 30px
-//	 padding-left: 10px
-//	 padding-right: 40px
-//	 float: none
-//	 border-radius: $formRadius
-//	 @include prefix(box-shadow, 0 2px 3px rgba(#e0e0e0, .5) inset)
-//	 &:after
-//		 width: 14px
-//		 height: 9px
-//		 // top: 40%
-//		 right: 8px
-//		 border: none
-//		 @include prefix(transform-origin, 0)
-//		 @include prefix(transform, none)
-//		 @include bgImage('../images/icon/chevron-down.png', 0 0, 100% 100%)
-//	 
-//	 .option.selected
-//		 font-weight: 500
-//	 
-//	 .list
-//		 width: 100%
-//	 
+//	color: #000
+//	// border: none
+//	height: 30px
+//	line-height: 30px
+//	padding-left: 10px
+//	padding-right: 40px
+//	float: none
+//	border-radius: $formRadius
+//	@include prefix(box-shadow, 0 2px 3px rgba(#e0e0e0, .5) inset)
+//	&:after
+//		width: 14px
+//		height: 9px
+//		// top: 40%
+//		right: 8px
+//		border: none
+//		@include prefix(transform-origin, 0)
+//		@include prefix(transform, none)
+//		@include bgImage('../images/icon/chevron-down.png', 0 0, 100% 100%)
+//	
+//	.option.selected
+//		font-weight: 500
+//	
+//	.list
+//		width: 100%
+//	
 // 
 .form-control
 	border-radius: $formRadius

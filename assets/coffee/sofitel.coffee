@@ -6,6 +6,7 @@ $ ->
 			$('.image-dd').msDropDown()
 			do this.setupDatePicker
 			do this.setupTimePicker
+			do this.setupSidebarToggle
 			return
 		@setupDatePicker: ->
 			$('.date-picker').datepicker
@@ -15,6 +16,11 @@ $ ->
 			$('.time-picker').timepicker
 				'scrollDefault': 'now'
 				'timeFormat': 'h:i A'
+			return
+		@setupSidebarToggle: ->
+			$(document).on 'click', '#sidebar .sub-menu a', ->
+				$(this).parent().toggleClass('toggled')
+				$(this).next().slideToggle(100)
 			return
 
 	class CreateNewBlock

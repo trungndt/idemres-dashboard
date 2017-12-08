@@ -1,0 +1,69 @@
+#sidebar
+	width: 200px
+	background-color: $color-secondary
+	position: fixed
+	top: $navHeight
+	bottom: 0
+	z-index: 9
+
+	li
+		list-style-type: none
+	a
+		@include clearLink(#fff)
+		@include transition()
+
+	$iconSpace: 50px
+	.main-menu
+		padding: 0
+		.icon
+			@extend .vertical-center
+			left: 16px
+		& > li > a
+			padding: 10px 20px 10px $iconSpace
+			display: block
+			font-weight: 500
+			position: relative
+			font-size: 11px
+			@include clearLink(#fff)
+		
+		& > li > a:hover,
+		& > li > a:active,
+		& > li > a:focus,
+		& > .active > a
+			background-color: $color-primary
+			font-weight: 600
+	
+	.sub-menu > a:after
+		content: ''
+		display: block
+		width: 10px
+		height: 6px
+		position: absolute
+		top: 13px
+		right: 10px
+		transform-origin: 50% 50%
+		@include transition
+		@include bgImage($url: '../images/icon/icon-arrow-down-light.png', $size: 100% 100%)
+	.sub-menu.toggled > a:after
+		@include prefix(transform, rotate(180deg))
+
+	.child-menu
+		background-color: $blackBlue
+		padding: 10px 0
+		display: none
+		// height: 0
+		// overflow: hidden
+		// @include transition
+		& > li > a
+			padding: 8px 20px 8px $iconSpace
+			display: block
+			color: $gray
+		
+		& > li > a:hover,
+		& > li > a:active,
+		& > li > a:focus,
+		& > .active > a
+			color: #fff
+			font-weight: 600
+	.toggled .child-menu
+		// height: auto

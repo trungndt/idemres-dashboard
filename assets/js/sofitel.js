@@ -9,6 +9,7 @@
         $('.image-dd').msDropDown();
         this.setupDatePicker();
         this.setupTimePicker();
+        this.setupSidebarToggle();
       };
 
       General.setupDatePicker = function() {
@@ -21,6 +22,13 @@
         $('.time-picker').timepicker({
           'scrollDefault': 'now',
           'timeFormat': 'h:i A'
+        });
+      };
+
+      General.setupSidebarToggle = function() {
+        $(document).on('click', '#sidebar .sub-menu a', function() {
+          $(this).parent().toggleClass('toggled');
+          return $(this).next().slideToggle(100);
         });
       };
 
