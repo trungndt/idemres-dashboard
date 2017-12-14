@@ -854,7 +854,7 @@ button, button:focus, button:active, a, a:focus, a:active {
     background-color: #5e5e5e;
     color: #fff; }
 
-.form-control, .form-horizontal .nice-select, .input-group {
+.form-control, .nice-select, .input-group {
   border-radius: 5px;
   border: 1px solid #e0e0e0;
   height: 30px;
@@ -890,14 +890,15 @@ button, button:focus, button:active, a, a:focus, a:active {
     display: block;
     margin-top: 5px; }
 
-.form-horizontal select.nice-select {
+select.nice-select {
   display: none; }
 
-.form-horizontal .nice-select {
+.nice-select {
   padding-left: 12px;
   line-height: 28px;
-  width: 100%; }
-  .form-horizontal .nice-select:after {
+  width: 100%;
+  float: none; }
+  .nice-select:after {
     width: 15px;
     height: 8px;
     top: 11px;
@@ -915,16 +916,16 @@ button, button:focus, button:active, a, a:focus, a:active {
     -ms-transform: none;
     -o-transform: none;
     transform: none; }
-  .form-horizontal .nice-select.open:after {
+  .nice-select.open:after {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg); }
-  .form-horizontal .nice-select .option {
+  .nice-select .option {
     min-height: 30px;
     line-height: 30px; }
-    .form-horizontal .nice-select .option.selected {
+    .nice-select .option.selected {
       font-weight: 400; }
 
 .image-dd {
@@ -1017,11 +1018,11 @@ button, button:focus, button:active, a, a:focus, a:active {
   display: inline-block;
   margin-right: 3px; }
 
-.form-control.icon-left, .form-horizontal .icon-left.nice-select, .icon-left.input-group {
+.form-control.icon-left, .icon-left.nice-select, .icon-left.input-group {
   padding-left: 32px; }
-  .form-control.icon-left.date-picker, .form-horizontal .icon-left.date-picker.nice-select, .icon-left.date-picker.input-group {
+  .form-control.icon-left.date-picker, .icon-left.date-picker.nice-select, .icon-left.date-picker.input-group {
     background: url("../images/icon/icon-calendar.png") 9px 50%/auto 12px no-repeat; }
-  .form-control.icon-left.time-picker, .form-horizontal .icon-left.time-picker.nice-select, .icon-left.time-picker.input-group {
+  .form-control.icon-left.time-picker, .icon-left.time-picker.nice-select, .icon-left.time-picker.input-group {
     background: url("../images/icon/icon-time.png") 9px 50%/auto 14px no-repeat; }
 
 /* Tables */
@@ -1179,7 +1180,7 @@ header {
 .navbar-form {
   padding: 13px 15px;
   margin: 0; }
-  .navbar-form .form-group, .navbar-form .form-control, .navbar-form .form-horizontal .nice-select, .form-horizontal .navbar-form .nice-select, .navbar-form .input-group {
+  .navbar-form .form-group, .navbar-form .form-control, .navbar-form .nice-select, .navbar-form .input-group {
     width: 100%;
     border-radius: 30px; }
 
@@ -1205,9 +1206,9 @@ header {
   #sidebar .main-menu {
     padding: 0; }
     #sidebar .main-menu .icon {
-      left: 16px; }
+      left: 12px; }
     #sidebar .main-menu > li > a {
-      padding: 10px 20px 10px 50px;
+      padding: 10px 40px;
       display: block;
       font-weight: 500;
       position: relative;
@@ -1248,7 +1249,7 @@ header {
     padding: 10px 0;
     display: none; }
     #sidebar .child-menu > li > a {
-      padding: 8px 20px 8px 50px;
+      padding: 8px 20px 8px 40px;
       display: block;
       color: #AAA; }
     #sidebar .child-menu > li > a:hover,
@@ -1257,6 +1258,20 @@ header {
     #sidebar .child-menu > .active > a {
       color: #fff;
       font-weight: 600; }
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 0 20px; }
+  .breadcrumb > li + li:before {
+    content: '>';
+    color: #777777; }
+  .breadcrumb a {
+    color: #777777;
+    text-decoration: none; }
+    .breadcrumb a:hover, .breadcrumb a:active, .breadcrumb a:focus {
+      text-decoration: none; }
+  .breadcrumb > .active {
+    font-weight: bold; }
 
 .step-group {
   text-align: center;
@@ -1400,17 +1415,7 @@ header {
 .tbl-attachments-preview td:first-child {
   padding-right: 40px; }
 
-.home #main #content {
+#content {
   padding-left: 200px; }
-  .home #main #content h1 {
-    font-size: 20px; }
-  .home #main #content .content-header {
+  #content .content-header {
     padding-left: 20px; }
-    .home #main #content .content-header .btn-info {
-      background-color: #005CAF; }
-    .home #main #content .content-header .nice-select {
-      float: none;
-      display: table; }
-    .home #main #content .content-header .form-control, .home #main #content .content-header .form-horizontal .nice-select, .form-horizontal .home #main #content .content-header .nice-select, .home #main #content .content-header .input-group {
-      border-radius: 5px;
-      width: auto; }

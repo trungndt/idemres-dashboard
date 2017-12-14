@@ -9,6 +9,8 @@
     %link{href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/plugins/nice-select/css/nice-select.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/plugins/image-dd/css/msdropdown/dd.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/datatables/datatables.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/datatables/DataTables-1.10.16/css/dataTables.bootstrap.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
 
   %body.home
@@ -69,19 +71,47 @@
                 %a{href:"#"} Conversion Report
               %li
                 %a{href:"#"} Email Campaigns
+      
       %section#content
-        .content-header
-          %h1 All Events
-          %a.btn.btn-info Add New Block
-          %select.nice-select
-            %option Filter by status
-          .form-group
-              %i.icon.icon-nput.form-control{type:"text", placeholder:"Search event reference/name..."}
-          .count-e-page
-            Display 
-            %select.nice-select
-              %option 10
-            per page
+        .container-fluid
+          %ul.breadcrumb
+            %li
+              %a{href: "#"} All Bookings
+            %li
+              %a{href: "#"} Tech in Asia Singapore 2017
+            %li
+              %a{href: "#"} Reports
+            %li.active All Events
+          
+          .content-header
+            .heading 
+              %h2 All Events
+
+            -# %div
+            -#   %a.btn.btn-info Add New Block
+            -# %select.nice-select
+            -#   %option Filter by status
+            -# .form-group
+            -#     %i.icon.icon-nput.form-control{type:"text", placeholder:"Search event reference/name..."}
+            -# .count-e-page
+            -#   Display 
+            -#   %select.nice-select
+            -#     %option 10
+            -#   per page
+
+            %div
+              %table.table.table-striped#tblAllEvents
+                %thead
+                  %tr
+                    %th Date Added
+                    %th Acc. Holder
+                    %th Event Ref.
+                    %th Event Name
+                    %th Contracted Start
+                    %th Company
+                    %th Customer
+                    %th Reg
+                    %th Status
 
 
 %script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}
@@ -90,4 +120,5 @@
 %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", type:"text/javascript"}
 %script{src:"assets/plugins/nice-select/js/jquery.nice-select.min.js", type:"text/javascript"}
 %script{src:"assets/plugins/image-dd/js/msdropdown/jquery.dd.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/datatables/datatables.min.js", type:"text/javascript"}
 %script{src:"assets/js/sofitel.js", type:"text/javascript"}

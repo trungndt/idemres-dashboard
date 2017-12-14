@@ -153,33 +153,35 @@ button, a
 			display: block
 			margin-top: 5px
 
-	select.nice-select
-		display: none
+
+select.nice-select
+	display: none
+
+.nice-select
+	@extend .form-control
+	padding-left: 12px
+	line-height: ($formHeight - 2px)
+	width: 100%
+	float: none
+	&:after
+		width: 15px
+		height: 8px
+		top: 11px
+		margin: 0
+		border: none
+		transform-origin: 50% 50%
+		@include bgImage('../images/icon/icon-arrow-down-dark.png', 0 0, 100% 100%)
+		@include transition()
+		@include prefix(transform, none)
 	
-	.nice-select
-		@extend .form-control
-		padding-left: 12px
-		line-height: ($formHeight - 2px)
-		width: 100%
-		&:after
-			width: 15px
-			height: 8px
-			top: 11px
-			margin: 0
-			border: none
-			transform-origin: 50% 50%
-			@include bgImage('../images/icon/icon-arrow-down-dark.png', 0 0, 100% 100%)
-			@include transition()
-			@include prefix(transform, none)
-		
-		&.open:after
-			@include prefix(transform, rotate(180deg))
-		
-		.option
-			min-height: $formHeight
-			line-height: $formHeight
-			&.selected
-				font-weight: 400
+	&.open:after
+		@include prefix(transform, rotate(180deg))
+	
+	.option
+		min-height: $formHeight
+		line-height: $formHeight
+		&.selected
+			font-weight: 400
 
 
 .image-dd
