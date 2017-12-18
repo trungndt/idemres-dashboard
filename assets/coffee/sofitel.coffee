@@ -75,7 +75,8 @@ $ ->
 				'customer_name': 'Sylvia Stay'
 				'customer_email': 'sylvia@gmail.com'
 				'reg': '24/65'
-				'is_active': false
+				'is_active': false,
+				'url': '#'
 			,
 				'date_added': '30 Jul 2017, 12:18'
 				'account_holder': 'JILEE'
@@ -89,7 +90,8 @@ $ ->
 				'customer_name': 'Sylvia Stay'
 				'customer_email': 'sylvia@gmail.com'
 				'reg': '12/43'
-				'is_active': false
+				'is_active': false,
+				'url': 'http://google.com'
 			,
 				'date_added': '30 Jul 2017, 12:18'
 				'account_holder': 'JOMA'
@@ -102,7 +104,8 @@ $ ->
 				'customer_name': 'Sylvia Stay'
 				'customer_email': 'sylvia@gmail.com'
 				'reg': '3/42'
-				'is_active': false
+				'is_active': false,
+				'url': '#'
 			,
 				'date_added': '30 Jul 2017, 12:18'
 				'account_holder': 'DINSMITH'
@@ -115,7 +118,8 @@ $ ->
 				'customer_name': 'Sylvia Stay'
 				'customer_email': 'sylvia@gmail.com'
 				'reg': '3/21'
-				'is_active': false
+				'is_active': false,
+				'url': 'http://google.com'
 			]
 			$('#tblAllEvents').DataTable
 				data: DATA
@@ -128,7 +132,35 @@ $ ->
 					{ data: 'company' },
 					{ data: 'customer_name' },
 					{ data: 'reg' },
-					{ data: 'is_active' }
+					{ data: 'url' }
+				]
+				columnDefs: [
+					targets: 3
+					render: (data, type, row) ->
+						mapper =
+							'planning': 'tag-warning'
+							'live': 'tag-success'
+							'pending': 'tag-default'
+						cls = 'tag ' + mapper[row.status.toLowerCase()]
+						cls += ' status-' + row.status.toLowerCase()
+						# content = row.status + row.status == 'Planning' ? row.percent : ' ')
+						content = row.status + (if row.status == 'Planning' then ' ' + row.percent + '%' else '')
+						data + '<br/><div class="' + cls + '">' + content + '</div>'
+				,
+					targets: 4
+					render: (data, type, row) ->
+						data + '<br/><small>' + row.contracted_duration + '</small>'
+				,
+					targets: 6
+					render: (data, type, row) ->
+						data + '<br/><small class="customer-email">' + row.customer_email + '</small>'
+				,
+					targets: 8
+					render: (data, type, row) ->
+						cls = 'icon icon-globe' + (if data == '#' then '-disabled' else '')
+						targetAttr = if data != '#' then 'target="_blank"' else ''
+						'<a href="' + data + '" class="' + cls + '" ' + targetAttr + '></a>'
+						
 				]
 			return
 

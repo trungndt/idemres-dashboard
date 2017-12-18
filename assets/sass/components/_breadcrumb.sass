@@ -1,6 +1,6 @@
 .breadcrumb
 	background-color: transparent
-	padding: 0 20px
+	padding: 0 $sidePadding
 	&>li+li:before
 		content: '>'
 		color: $color-default
@@ -8,3 +8,4 @@
 		@include clearLink($color-default)
 	& > .active
 		font-weight: bold
+

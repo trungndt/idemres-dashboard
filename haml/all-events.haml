@@ -14,7 +14,7 @@
     %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
 
   %body.home
-    %header.container-fluid
+    %header.container-fluid.navbar-fixed-top
       .row.space-0
         .col-sm-2
           %a.logo{href:"/"}
@@ -73,45 +73,43 @@
                 %a{href:"#"} Email Campaigns
       
       %section#content
+        %ul.breadcrumb
+          %li
+            %a{href: "#"} All Bookings
+          %li
+            %a{href: "#"} Tech in Asia Singapore 2017
+          %li
+            %a{href: "#"} Reports
+          %li.active All Events
+        
+        .content-header
+          .heading 
+            %h2 All Events
+          %div
+            %a.btn.btn-info Add New Block
+          -# %select.nice-select
+          -#   %option Filter by status
+          -# .form-group
+          -#     %i.icon.icon-nput.form-control{type:"text", placeholder:"Search event reference/name..."}
+          -# .count-e-page
+          -#   Display 
+          -#   %select.nice-select
+          -#     %option 10
+          -#   per page
+
         .container-fluid
-          %ul.breadcrumb
-            %li
-              %a{href: "#"} All Bookings
-            %li
-              %a{href: "#"} Tech in Asia Singapore 2017
-            %li
-              %a{href: "#"} Reports
-            %li.active All Events
-          
-          .content-header
-            .heading 
-              %h2 All Events
-
-            -# %div
-            -#   %a.btn.btn-info Add New Block
-            -# %select.nice-select
-            -#   %option Filter by status
-            -# .form-group
-            -#     %i.icon.icon-nput.form-control{type:"text", placeholder:"Search event reference/name..."}
-            -# .count-e-page
-            -#   Display 
-            -#   %select.nice-select
-            -#     %option 10
-            -#   per page
-
-            %div
-              %table.table.table-striped#tblAllEvents
-                %thead
-                  %tr
-                    %th Date Added
-                    %th Acc. Holder
-                    %th Event Ref.
-                    %th Event Name
-                    %th Contracted Start
-                    %th Company
-                    %th Customer
-                    %th Reg
-                    %th Status
+          %table.table.table-striped#tblAllEvents
+            %thead
+              %tr
+                %th Date Added
+                %th Acc. Holder
+                %th Event Ref.
+                %th Event Name
+                %th Contracted Start
+                %th Company
+                %th Customer
+                %th Reg
+                %th 
 
 
 %script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}

@@ -29,6 +29,15 @@
 		height: $sidebarIconSize
 		@include bgImage($url: '../images/icon/icon-chart.png', $size: auto auto)
 
+	&.icon-globe
+		width: 17px
+		height: 17px
+		@include bgImage($url: '../images/icon/icon-globe-blue.png', $size: 100% 100%)
+	&.icon-globe-disabled
+		width: 17px
+		height: 17px
+		@include bgImage($url: '../images/icon/icon-globe.png', $size: 100% 100%)
+
 .btn
 	@include transition()
 	height: $btnHeight

@@ -9,6 +9,9 @@ body
 	color: #333
 	font-size: 13px
 
+#main
+	padding-top: $navHeight
+
 h1, h2, h3, h4, h5, h6
   font-weight: 400
 
@@ -53,6 +56,24 @@ section
 	color: $gray
 .text-default
   color: $color-default
+
+.tag
+	display: inline-block
+	border-radius: 3px
+	background-color: transparent
+	border: 1px solid transparent
+	font-size: 11px
+	padding: 1px 5px
+	text-transform: uppercase
+	&.tag-default
+		border-color: $color-default
+		color: $color-default
+	&.tag-success
+		border-color: $color-success
+		color: $color-success
+	&.tag-warning
+		border-color: $color-warning
+		color: $color-warning
 
 small
   font-size: 11px
