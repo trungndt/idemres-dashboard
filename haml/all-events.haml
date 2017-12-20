@@ -86,10 +86,23 @@
         .content-header
           .heading 
             %h2 All Events
-          %div
-            %a.btn.btn-info 
-              %i.zmdi.zmdi-plus.mr-5
-              Add New Block
+          .row
+            .col-sm-6
+              %a.btn.btn-info 
+                %i.zmdi.zmdi-plus.mr-5
+                Add New Block
+            .col-sm-6.text-right
+              .switcher
+                .switcher-option.active
+                  %input#rdDisplayCalendar{type:"radio",name:"display-option"}
+                  %label{for:"rdDisplayCalendar"}
+                    %i.zmdi.zmdi-calendar.mr-5
+                    Calendar
+                .switcher-option
+                  %input#rdDisplayList{type:"radio",name:"display-option",checked:"checked"}
+                  %label{for:"rdDisplayList"}
+                    %i.zmdi.zmdi-format-list-bulleted.mr-5
+                    List
           -# %select.nice-select
           -#   %option Filter by status
           -# .form-group

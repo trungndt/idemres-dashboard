@@ -305,6 +305,7 @@ $ ->
 			do this.setupDatePicker
 			do this.setupTimePicker
 			do this.setupSidebarToggle
+			do this.setupSwitcher
 			return
 		@setupDatePicker: ->
 			$('.date-picker').datepicker
@@ -320,6 +321,11 @@ $ ->
 				$(this).parent().toggleClass('toggled')
 				$(this).next().slideToggle(100)
 			return
+		@setupSwitcher: ->
+			$(document).on 'click', '.switcher input[type="radio"]', ->
+				$(this).closest('.switcher').find('.active').removeClass('active')
+				$(this).closest('.switcher-option').addClass('active')
+				return
 
 	class CreateNewBlock
 		@init: ->
@@ -425,7 +431,7 @@ $ ->
 					$me.parent().find('.input-sm').removeClass('input-sm')
 					# Create Dropdown filter
 					$select = $('<select/>', {
-							'class': 'form-control drop-filter',
+							'class': 'drop-filter',
 							'html': $('<option/>', {
 									'value': '',
 									'html': 'Filter by status'
@@ -444,6 +450,7 @@ $ ->
 						column.search( val ? '^'+val+'$' : '', true, false).draw()
 
 					$me.prev().find('.col-status').prepend($select)
+					# $me.prev().find('select').addClass('nice-select').niceSelect()
 					false
 			return
 

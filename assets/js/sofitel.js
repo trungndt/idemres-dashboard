@@ -306,6 +306,7 @@
         this.setupDatePicker();
         this.setupTimePicker();
         this.setupSidebarToggle();
+        this.setupSwitcher();
       };
 
       General.setupDatePicker = function() {
@@ -325,6 +326,13 @@
         $(document).on('click', '#sidebar .sub-menu a', function() {
           $(this).parent().toggleClass('toggled');
           return $(this).next().slideToggle(100);
+        });
+      };
+
+      General.setupSwitcher = function() {
+        return $(document).on('click', '.switcher input[type="radio"]', function() {
+          $(this).closest('.switcher').find('.active').removeClass('active');
+          $(this).closest('.switcher-option').addClass('active');
         });
       };
 
@@ -457,7 +465,7 @@
             $me.parent().removeClass('form-inline');
             $me.parent().find('.input-sm').removeClass('input-sm');
             $select = $('<select/>', {
-              'class': 'form-control drop-filter',
+              'class': 'drop-filter',
               'html': $('<option/>', {
                 'value': '',
                 'html': 'Filter by status'
