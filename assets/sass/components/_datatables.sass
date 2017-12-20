@@ -1,8 +1,74 @@
-.dataTables_wrapper
+div.dataTables_wrapper
+	margin: 0 -15px
+	& > .top,
+	& > .bottom,
 	& > .row:not(:nth-child(2)) > [class*="col-"]
-		padding: $sidePadding
+		padding: 0 $sidePadding
+	& > .dataTable
 	& > .row:nth-child(2) > [class*="col-"]
 		padding: 0
+	div.dataTables_filter
+		label
+			display: block
+		input
+			display: block
+			width: 100%
+			margin: 0
+
+	div.dataTables_paginate
+		text-align: center
+		padding-top: 30px
+
+	$pagingSize: 20px
+	.paginate_button
+		display: inline-block
+		padding: 0 5px
+		a
+			border: none
+			border-radius: 50%
+			width: $pagingSize
+			height: $pagingSize
+			line-height: $pagingSize
+			padding: 0
+			@include transition
+		&.previous a,
+		&.next a
+			text-indent: -9999px
+			border: 1px solid $light-gray
+			border-radius: 5px
+		&.previous
+			padding-right: 15px
+			a
+				@include bgImage('../images/icon/icon-arrow-left-dark.png', center center, auto 10px)
+
+		&.next
+			padding-left: 15px
+			a
+				@include bgImage('../images/icon/icon-arrow-right-dark.png', center center, auto 10px)
+
+	.pagination > .active
+		& > a,
+		& > a:hover,
+		& > a:focus
+			background-color: $color-info
+			border-color: $color-info
+
 
 table.dataTable
 	width: 100% !important
+	thead > tr > th
+		background-color: #efefef
+		@include prefix(box-shadow, 0 2px 2px 0 rgba(#bbb, .5) inset)
+		border-bottom: none
+		color: $color-default
+		font-size: 11px
+		font-weight: normal
+
+.table-striped>tbody>tr:nth-of-type(odd)
+	background-color: #F7FCFF
+
+.tag.tag-default.status-pending
+	padding: 0
+	border: none
+	text-transform: none
+	font-style: italic

@@ -4,6 +4,7 @@
     %meta{charset:"utf-8"}
     %meta{content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name:"viewport"}
     %link{href:"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700", rel:"stylesheet"}
+    %link{href:"https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css", rel:"stylesheet"}
     %link{href:"assets/plugins/jquery-ui/jquery-ui.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/plugins/timepicker/jquery.timepicker.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel:"stylesheet", type:"text/css"}
@@ -86,7 +87,9 @@
           .heading 
             %h2 All Events
           %div
-            %a.btn.btn-info Add New Block
+            %a.btn.btn-info 
+              %i.zmdi.zmdi-plus.mr-5
+              Add New Block
           -# %select.nice-select
           -#   %option Filter by status
           -# .form-group
@@ -110,6 +113,7 @@
                 %th Customer
                 %th Reg
                 %th 
+                %th Status
 
 
 %script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}
