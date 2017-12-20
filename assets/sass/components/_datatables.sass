@@ -14,6 +14,10 @@ div.dataTables_wrapper
 			display: block
 			width: 100%
 			margin: 0
+	.top
+		font-size: 12px
+	div.dataTables_length select
+		margin: 0 15px
 
 	div.dataTables_paginate
 		text-align: center
@@ -56,6 +60,8 @@ div.dataTables_wrapper
 
 table.dataTable
 	width: 100% !important
+	a
+		@include clearLink($color-info)
 	thead > tr > th
 		background-color: #efefef
 		@include prefix(box-shadow, 0 2px 2px 0 rgba(#bbb, .5) inset)

@@ -1412,6 +1412,10 @@ div.dataTables_wrapper {
     display: block;
     width: 100%;
     margin: 0; }
+  div.dataTables_wrapper .top {
+    font-size: 12px; }
+  div.dataTables_wrapper div.dataTables_length select {
+    margin: 0 15px; }
   div.dataTables_wrapper div.dataTables_paginate {
     text-align: center;
     padding-top: 30px; }
@@ -1451,6 +1455,11 @@ div.dataTables_wrapper {
 
 table.dataTable {
   width: 100% !important; }
+  table.dataTable a {
+    color: #0095FF;
+    text-decoration: none; }
+    table.dataTable a:hover, table.dataTable a:active, table.dataTable a:focus {
+      text-decoration: none; }
   table.dataTable thead > tr > th {
     background-color: #efefef;
     -webkit-box-shadow: 0 2px 2px 0 rgba(187, 187, 187, 0.5) inset;
