@@ -4,4 +4,127 @@
 	.content-header
 		padding: 0 $sidePadding
 		margin-bottom: 30px
+	.travel-info
+		border-left: 1px solid $light-gray
+	.row
+		margin-left: 0
+		margin-right: 0
+	.confirm-color
+		color: $color-confirm
+	.heading, .title-detail
+		a
+			float: right
+			font-size: 13px
+			margin-left: 20px
+	.panel-reservation
+		h3 
+			font-size: 20px
+		span
+			font-size: 12px
+			color: $dark-gray
+
+		.a-edit
+			float: right
+		.structure
+			border: 1px solid $light-gray
+			padding: 10px
+		.col-3
+			width: 23%
+			padding: 15px
+			margin-right: 2%
+			float: left
+			border: 1px solid $light-gray
+		.p5
+			padding: 5px 15px
+		.title-detail
+			width: 100%
+			display: table
+			margin: 30px 0 20px
+			span 
+				&:first-child 
+					font-size: 18px
+					margin-right: 15px
+	.info-reservation-guest
+		h4
+			font-size: 16px
+			font-weight: bold
+			color: $dark-gray
+		table
+			width: 100%
+			margin: 15px 0
+			tr 
+				td, th
+					&:first-child 
+						padding: 4px 0 10px 20px
+						width: 150px
+		.p15
+			padding: 15px
+		.text11
+			font-size: 11px
+			color: $dark-gray 
+		.break
+			padding-bottom: 20px
 		
+		.featrue
+			border: 1px solid $light-gray
+			margin: 20px 0
+		.col-7, .col-5, .col-8, .col-4
+			float: left
+		
+		.col-7
+			width: 60%
+		.col-5
+			width: 40%
+		.col-8
+			width: 70%
+		.col-4
+			width: 30%
+		.stay-date-time
+			background-color: $lightBlueSky
+		.primary-guest,
+		.other-guest,
+			h4 	
+				margin-left: 20px
+		.edited-reservation,
+		.remove-reservation
+			td, th
+				&:last-child
+					position: relative
+					padding-right: 15px
+					&:after
+						float: right
+						font-style: italic
+						font-size: 11px
+						font-weight: normal
+						color: $dark-gray
+
+		.edited-reservation
+			background-color: $lightGreen
+			td, th
+				&:last-child:after
+					content: "edited" 
+					
+		.remove-reservation
+			background-color: $color-remove
+			td, th
+				&:nth-child(2)
+					text-decoration: line-through
+			td, th 
+				&:last-child:after
+					content: "removed" 
+		.payment-info
+			span 
+				padding-right: 15px
+			table 
+					tr 
+						td, th
+							&:first-child 
+								padding: 5px 0 10px 0
+			.price-sum
+				table 
+					tr 
+						td, th
+							&:nth-child(2)
+								text-align: right
+			.border-bot
+				border-bottom: 1px solid $light-gray

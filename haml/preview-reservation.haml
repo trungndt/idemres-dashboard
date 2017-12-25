@@ -1,0 +1,373 @@
+%html
+  %head
+    %title Dashboard - All Events
+    %meta{charset:"utf-8"}
+    %meta{content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name:"viewport"}
+    %link{href:"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700", rel:"stylesheet"}
+    %link{href:"https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css", rel:"stylesheet"}
+    %link{href:"assets/plugins/jquery-ui/jquery-ui.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/timepicker/jquery.timepicker.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/nice-select/css/nice-select.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/image-dd/css/msdropdown/dd.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/datatables/datatables.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/datatables/DataTables-1.10.16/css/dataTables.bootstrap.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
+
+  %body.home
+    %header.container-fluid.navbar-fixed-top
+      .row.space-0
+        .col-sm-2
+          %a.logo{href:"/"}
+            %img.img-responsive{src:"assets/images/logo-sofitel.png"}
+        .col-sm-6
+          -# %form.navbar-form
+          -#   .form-group
+          -#     %input.form-control{type:"text", placeholder:"Search..."}
+        .col-sm-3.col-sm-offset-1
+          %a.logo-sub{href:"/"}
+            %img{src:"assets/images/sol.png"}
+            %span 
+              %strong Sofitel Singapore Resort
+              Carrina Yang
+    
+    #main
+      %aside#sidebar
+        %ul.main-menu
+          %li
+            %a{href:"all-events.html"}
+              %i.icon.icon-gift
+              ALL EVENTS
+          %li
+            %a{href:"all-group-res.html"}
+              %i.icon.icon-bed
+              ALL GROUP RES.
+          %li
+            %a{href:"#"}
+              %i.icon.icon-people
+              EVENT PLANNERS
+          %li.sub-menu.toggled
+            %a{href:"#"}
+              %i.icon.icon-briefcase
+              HOTEL SETTINGS
+            %ul.child-menu
+              %li
+                %a{href:"#"} Hotel Information
+              %li
+                %a{href:"#"} Facilities
+              %li
+                %a{href:"#"} Accommodation
+              %li
+                %a{href:"#"} Reservation Setup
+          %li.sub-menu.toggled
+            %a{href:"#"}
+              %i.icon.icon-chart
+              REPORTS
+            %ul.child-menu
+              %li
+                %a{href:"#"} Events Report
+              %li
+                %a{href:"#"} Attendees Report
+              %li
+                %a{href:"#"} Conversion Report
+              %li
+                %a{href:"#"} Email Campaigns
+      
+      %section#content
+        %ul.breadcrumb
+          %li
+            %a{href: "#"} All Bookings
+          %li
+            %a{href: "#"} Tech in Asia Singapore 2017
+          %li
+            %a{href: "#"} Reports
+          %li.active All Events
+        
+        .content-header
+          .heading 
+            %h2 Reservation: Jina Lee
+            %a.btn.btn-info-bordered{href:"#"} Cancel Reservation
+            %a.btn.btn-info.btn-lg.disabled Acknowledge Changes
+        .container-fluid
+          .panel-reservation
+            .row
+              .col-3
+                %span STATUS
+                %span Updated 12 Jun 2017
+                %h3.confirm-color Confirmed
+              .col-sm-9.structure
+                %row
+                  .col-sm-4.p5
+                    %span PMS CONFIRMATION NO.
+                    %a.a-edit{href:"#"} Edit
+                    %h3 4829123af123468
+                  .col-sm-4.travel-info.p5
+                    %span ASSIGNED ROOM NO.
+                    %a.a-edit{href:"#"} Edit
+                    %h3 _
+                  .col-sm-4.travel-info.p5
+                    %span DATE CONFIRMED
+                    %h3 12 Jul 2017 
+            .title-detail
+              %span Reservation Details
+              %span last edit: 12 Oct 2017, 08:53
+              %a.btn.btn-info.btn-lg Acknowledge Changes
+
+          .info-reservation-guest
+            .stay-date-time.featrue
+              %table.p20
+                %tr
+                  %td Dates
+                  %th 24 Jun 2017 - 26 Jun 2017
+                %tr 
+                  %td Nights
+                  %th 3
+                %tr.edited-reservation
+                  %td Guests
+                  %th 2 Adults, 3 Children
+                %tr.remove-reservation
+                  %td Room Type
+                  %th Deluxe Luxury Room
+                %tr
+                  %td Membership ID
+                  %th 123123123
+                %tr 
+                  %td Remarks
+                  %td.text-gray N/A
+            .primary-guest.featrue
+              %h4 Guest (Primary Guest)
+              .row
+                .col-7
+                  %table
+                    %tr
+                      %td 
+                        %b Personal Information
+                    %tr.edited-reservation
+                      %td Salutation
+                      %td Mr
+                    %tr.remove-reservation
+                      %td First Name
+                      %td Firstname
+                    %tr
+                      %td Last Name
+                      %td Lastname
+                    %tr
+                      %td Phone Number
+                      %td +62 3112 1545 4646
+                    %tr.break
+                      %td Email Address
+                      %td blabla@gmail.com
+                    %tr
+                      %td Position / Title
+                      %td Wine Connoiseur
+                    %tr
+                      %td Organisation
+                      %td Robert Parker
+                    %tr
+                      %td Address
+                      %td Jl.M.H. Thamrin no.123A
+                    %tr
+                      %td City
+                      %td Jakarta
+                    %tr
+                      %td Region
+                      %td South Jakarta
+                    %tr
+                      %td ZIP / Postal Code 
+                      %td 121021
+                    %tr
+                      %td Country
+                      %td Indonesia
+                .col-5
+                  .travel-info
+                    %table
+                      %tr
+                        %td 
+                          %b Travel Information
+                      %tr
+                        %td Passport No.
+                        %td A123123123
+                      %tr
+                        %td Passport Expiry
+                        %td 20th December 2018
+                      %tr.remove-reservation
+                        %td Nationality
+                        %td Indonesia
+                      %tr.edited-reservation
+                        %td Date of Birth
+                        %td 22 October 1984
+                      %tr
+                        %td Arrival Date
+                        %td 02 July 2017
+                      %tr
+                        %td Arrival Time
+                        %td 12 30 PM
+                      %tr
+                        %td Arrival Flight
+                        %td AK131
+                      %tr
+                        %td Departure Date
+                        %td 04 July 2017
+                      %tr
+                        %td Departure Time
+                        %td 14 00 PM
+                      %tr
+                        %td Departure Flight
+                        %td AK131
+              
+            .other-guest.featrue
+              %h4 Guset 2
+              .row
+                .col-7
+                  %table
+                    %tr
+                      %td 
+                        %b Personal Information
+                    %tr
+                      %td Salutation
+                      %td Mr
+                    %tr
+                      %td First Name
+                      %td Firstname
+                    %tr
+                      %td Last Name
+                      %td Lastname
+                    %tr
+                      %td Phone Number
+                      %td +62 3112 1545 4646
+                    %tr
+                      %td Email Address
+                      %td blabla@gmail.com
+                    %tr
+                      %td Position / Title
+                      %td SEO Manager
+                    %tr.remove-reservation
+                      %td Organisation
+                      %td Aaligator
+                    %tr.edited-reservation
+                      %td Address
+                      %td Jl.M.H. Thamrin no.123A
+                    %tr
+                      %td City
+                      %td Jakarta
+                    %tr
+                      %td Region
+                      %td South Jakarta
+                    %tr
+                      %td ZIP / Postal Code 
+                      %td 121021
+                    %tr
+                      %td Country
+                      %td Indonesia
+                .col-5
+                  .travel-info
+                    %table
+                      %tr
+                        %td 
+                          %b Travel Information
+                      %tr
+                        %td Passport No.
+                        %td A123123123
+                      %tr
+                        %td Passport Expiry
+                        %td 20th December 2018
+                      %tr.edited-reservation
+                        %td Nationality
+                        %td Indonesia
+                      %tr.remove-reservation
+                        %td Date of Birth
+                        %td 22 October 1984
+                      %tr
+                        %td Arrival Date
+                        %td 02 July 2017
+                      %tr
+                        %td Arrival Time
+                        %td 12 30 PM
+                      %tr
+                        %td Arrival Flight
+                        %td AK131
+                      %tr
+                        %td Departure Date
+                        %td 04 July 2017
+                      %tr
+                        %td Departure Time
+                        %td 14 00 PM
+                      %tr
+                        %td Departure Flight
+                        %td AK131d 
+            .payment-info
+              .row
+                .col-8
+                  %h4 Payment Information
+                  %table
+                    %tr
+                      %td Name on Card
+                      %td Firsname Lastname
+                    %tr
+                      %td Payment Method
+                      %td Credit Card
+                    %tr
+                      %td Card Number
+                      %td 
+                        %span XXXX-XXXX-XXXX-1234
+                        %img{src:"assets/images/icon/icon-visa.png"}
+                  %h4 Billing Address
+                  %table
+                      %tr
+                        %td Name
+                        %td Firsname Lastname
+                      %tr
+                        %td Address 
+                        %td 67 Ubi Road 1 #02-02
+                      %tr
+                        %td City 
+                        %td Singapore
+                      %tr
+                        %td Region
+                        %td _
+                      %tr
+                        %td ZIP / Postal Code
+                        %td 123123
+                      %tr
+                        %td Country
+                        %td Singapore
+                .col-4
+                  .price-sum.featrue.p15
+                    %h4 Price Summary
+                    %table
+                      %tr
+                        %td Subtotal
+                        %td $540.00 SGD
+                      %tr
+                        %td Taxes & Fees
+                        %td $91.80 SGD
+                    %a{href:"#"} Show taxes & fees breakdown
+                    %hr
+                    %table
+                      %tr
+                        %th Total
+                        %th $631.80 SGD
+                      %tr
+                        %td
+                        %td.text11 to be paid at hotel
+                    %hr
+                    %table
+                      %tr
+                        %th 0 nights
+                        %td $315.90 SGD
+                      %tr
+                        %td
+                        %td.text11 avg. / night
+                    %a{href:"#"} Hide nightly breakdown
+              
+
+
+
+%script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}
+%script{src:"assets/plugins/jquery-ui/jquery-ui.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/timepicker/jquery.timepicker.min.js", type:"text/javascript"}
+%script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/nice-select/js/jquery.nice-select.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/image-dd/js/msdropdown/jquery.dd.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/datatables/datatables.min.js", type:"text/javascript"}
+%script{src:"assets/js/sofitel.js", type:"text/javascript"}

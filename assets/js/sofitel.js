@@ -391,6 +391,12 @@
         return $me.prev().find('.col-status').prepend($select);
       };
 
+      DataTableCustom.getElemLink = function(url, text, cls) {
+        var targetAttr;
+        targetAttr = url !== '#' ? 'target="_blank"' : '';
+        return '<a href="' + url + '" class="' + (cls || '') + '" ' + targetAttr + '>' + (text || '') + '</a>';
+      };
+
       return DataTableCustom;
 
     })();
@@ -465,7 +471,7 @@
             {
               targets: 2,
               render: function(data, type, row) {
-                return '<a href="' + row.url + '">' + data + '</a>';
+                return DataTableCustom.getElemLink(row.url, data);
               }
             }, {
               targets: 3,
@@ -479,7 +485,7 @@
                 cls = 'tag ' + mapper[row.status.toLowerCase()];
                 cls += ' status-' + row.status.toLowerCase();
                 content = row.status + (row.status === 'Planning' ? ' ' + row.percent + '%' : '');
-                return '<a href="' + row.url + '">' + data + '</a><br/><div class="' + cls + '">' + content + '</div>';
+                return DataTableCustom.getElemLink(row.url, data) + '<br/><div class="' + cls + '">' + content + '</div>';
               }
             }, {
               targets: 4,
@@ -494,10 +500,9 @@
             }, {
               targets: 8,
               render: function(data, type, row) {
-                var cls, targetAttr;
+                var cls;
                 cls = 'icon icon-globe' + (data === '#' ? '-disabled' : '');
-                targetAttr = data !== '#' ? 'target="_blank"' : '';
-                return '<a href="' + data + '" class="' + cls + '" ' + targetAttr + '></a>';
+                return DataTableCustom.getElemLink(data, '', cls);
               }
             }, {
               targets: 9,

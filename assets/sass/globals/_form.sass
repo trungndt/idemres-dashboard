@@ -79,6 +79,29 @@ button, a
 		background-color: $color-default-darker
 		color: #fff
 
+.btn-green
+	background-color: $color-success
+	border: none
+	color: #fff
+	&:hover,
+	&:active,
+	&:hover:active,
+	&:focus
+		background-color: $lightGreen
+		color: #fff
+
+.btn-info-bordered
+	background-color: transparent
+	border: 1px solid $color-info
+	color: $color-info
+	margin-left: 20px
+
+.disabled
+	&,
+	&:hover,
+	&:active,
+	&:focus
+		background-color: $color-default
 // .btn-info-bordered
 //	background-color: transparent
 //	border: 1px solid $color-info

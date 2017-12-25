@@ -862,6 +862,23 @@ button, button:focus, button:active, a, a:focus, a:active {
     background-color: #5e5e5e;
     color: #fff; }
 
+.btn-green {
+  background-color: #0cBA80;
+  border: none;
+  color: #fff; }
+  .btn-green:hover, .btn-green:active, .btn-green:hover:active, .btn-green:focus {
+    background-color: #e2f3ed;
+    color: #fff; }
+
+.btn-info-bordered {
+  background-color: transparent;
+  border: 1px solid #0095FF;
+  color: #0095FF;
+  margin-left: 20px; }
+
+.disabled, .disabled:hover, .disabled:active, .disabled:focus {
+  background-color: #777777; }
+
 .form-control, .nice-select, .input-group {
   border-radius: 5px;
   border: 1px solid #e0e0e0;
@@ -1217,6 +1234,15 @@ small {
   .hide-sm {
     display: none; } }
 
+.btn-info-bordered {
+  background-color: transparent;
+  border: 1px solid #0095FF;
+  color: #0095FF;
+  margin-left: 20px; }
+
+.disabled, .disabled:hover, .disabled:active, .disabled:focus {
+  background-color: #777777; }
+
 header {
   -webkit-box-shadow: 0 2px 5px rgba(85, 85, 85, 0.5);
   -moz-box-shadow: 0 2px 5px rgba(85, 85, 85, 0.5);
@@ -1349,6 +1375,108 @@ header {
   #content .content-header {
     padding: 0 20px;
     margin-bottom: 30px; }
+  #content .travel-info {
+    border-left: 1px solid #e0e0e0; }
+  #content .row {
+    margin-left: 0;
+    margin-right: 0; }
+  #content .confirm-color {
+    color: #00B169; }
+  #content .heading a, #content .title-detail a {
+    float: right;
+    font-size: 13px;
+    margin-left: 20px; }
+  #content .panel-reservation h3 {
+    font-size: 20px; }
+  #content .panel-reservation span {
+    font-size: 12px;
+    color: #777777; }
+  #content .panel-reservation .a-edit {
+    float: right; }
+  #content .panel-reservation .structure {
+    border: 1px solid #e0e0e0;
+    padding: 10px; }
+  #content .panel-reservation .col-3 {
+    width: 23%;
+    padding: 15px;
+    margin-right: 2%;
+    float: left;
+    border: 1px solid #e0e0e0; }
+  #content .panel-reservation .p5 {
+    padding: 5px 15px; }
+  #content .panel-reservation .title-detail {
+    width: 100%;
+    display: table;
+    margin: 30px 0 20px; }
+    #content .panel-reservation .title-detail span:first-child {
+      font-size: 18px;
+      margin-right: 15px; }
+  #content .info-reservation-guest h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #777777; }
+  #content .info-reservation-guest table {
+    width: 100%;
+    margin: 15px 0; }
+    #content .info-reservation-guest table tr td:first-child, #content .info-reservation-guest table tr th:first-child {
+      padding: 4px 0 10px 20px;
+      width: 150px; }
+  #content .info-reservation-guest .p15 {
+    padding: 15px; }
+  #content .info-reservation-guest .text11 {
+    font-size: 11px;
+    color: #777777; }
+  #content .info-reservation-guest .break {
+    padding-bottom: 20px; }
+  #content .info-reservation-guest .featrue {
+    border: 1px solid #e0e0e0;
+    margin: 20px 0; }
+  #content .info-reservation-guest .col-7, #content .info-reservation-guest .col-5, #content .info-reservation-guest .col-8, #content .info-reservation-guest .col-4 {
+    float: left; }
+  #content .info-reservation-guest .col-7 {
+    width: 60%; }
+  #content .info-reservation-guest .col-5 {
+    width: 40%; }
+  #content .info-reservation-guest .col-8 {
+    width: 70%; }
+  #content .info-reservation-guest .col-4 {
+    width: 30%; }
+  #content .info-reservation-guest .stay-date-time {
+    background-color: #f7fcff; }
+  #content .info-reservation-guest .primary-guest h4,
+  #content .info-reservation-guest .other-guest h4 {
+    margin-left: 20px; }
+  #content .info-reservation-guest .edited-reservation td:last-child, #content .info-reservation-guest .edited-reservation th:last-child,
+  #content .info-reservation-guest .remove-reservation td:last-child,
+  #content .info-reservation-guest .remove-reservation th:last-child {
+    position: relative;
+    padding-right: 15px; }
+    #content .info-reservation-guest .edited-reservation td:last-child:after, #content .info-reservation-guest .edited-reservation th:last-child:after,
+    #content .info-reservation-guest .remove-reservation td:last-child:after,
+    #content .info-reservation-guest .remove-reservation th:last-child:after {
+      float: right;
+      font-style: italic;
+      font-size: 11px;
+      font-weight: normal;
+      color: #777777; }
+  #content .info-reservation-guest .edited-reservation {
+    background-color: #e2f3ed; }
+    #content .info-reservation-guest .edited-reservation td:last-child:after, #content .info-reservation-guest .edited-reservation th:last-child:after {
+      content: "edited"; }
+  #content .info-reservation-guest .remove-reservation {
+    background-color: #efefef; }
+    #content .info-reservation-guest .remove-reservation td:nth-child(2), #content .info-reservation-guest .remove-reservation th:nth-child(2) {
+      text-decoration: line-through; }
+    #content .info-reservation-guest .remove-reservation td:last-child:after, #content .info-reservation-guest .remove-reservation th:last-child:after {
+      content: "removed"; }
+  #content .info-reservation-guest .payment-info span {
+    padding-right: 15px; }
+  #content .info-reservation-guest .payment-info table tr td:first-child, #content .info-reservation-guest .payment-info table tr th:first-child {
+    padding: 5px 0 10px 0; }
+  #content .info-reservation-guest .payment-info .price-sum table tr td:nth-child(2), #content .info-reservation-guest .payment-info .price-sum table tr th:nth-child(2) {
+    text-align: right; }
+  #content .info-reservation-guest .payment-info .border-bot {
+    border-bottom: 1px solid #e0e0e0; }
 
 .breadcrumb {
   background-color: transparent;

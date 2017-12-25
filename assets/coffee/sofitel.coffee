@@ -331,6 +331,7 @@ $ ->
 				$(this).closest('.switcher-option').addClass('active')
 				return
 
+
 	class DataTableCustom
 		@getDom: ->
 			'<"top" <"row form-horizontal" <"col-sm-2 col-status"> <"col-sm-3"f> <"col-sm-7 text-right"l> > > rt <"bottom"p><"clear">'
@@ -368,6 +369,10 @@ $ ->
 				column.search( val ? '^'+val+'$' : '', true, false).draw()
 
 			$me.prev().find('.col-status').prepend($select)
+		@getElemLink: (url, text, cls) ->
+			targetAttr = if url != '#' then 'target="_blank"' else ''
+			'<a href="' + url + '" class="' + (cls || '') + '" ' + targetAttr + '>' + (text || '') + '</a>'
+
 
 	class CreateNewBlock
 		@init: ->
@@ -401,6 +406,7 @@ $ ->
 				return
 			return
 
+
 	class AllEvents
 		@init: ->
 			do this.setupDataTables
@@ -426,7 +432,7 @@ $ ->
 				columnDefs: [
 					targets: 2,
 					render: (data, type, row) ->
-						'<a href="' + row.url + '">' + data + '</a>'
+						DataTableCustom.getElemLink(row.url, data)
 				,
 					targets: 3
 					render: (data, type, row) ->
@@ -438,7 +444,7 @@ $ ->
 						cls += ' status-' + row.status.toLowerCase()
 						# content = row.status + row.status == 'Planning' ? row.percent : ' ')
 						content = row.status + (if row.status == 'Planning' then ' ' + row.percent + '%' else '')
-						'<a href="' + row.url + '">' + data + '</a><br/><div class="' + cls + '">' + content + '</div>'
+						DataTableCustom.getElemLink(row.url, data) + '<br/><div class="' + cls + '">' + content + '</div>'
 				,
 					targets: 4
 					render: (data, type, row) ->
@@ -451,8 +457,7 @@ $ ->
 					targets: 8
 					render: (data, type, row) ->
 						cls = 'icon icon-globe' + (if data == '#' then '-disabled' else '')
-						targetAttr = if data != '#' then 'target="_blank"' else ''
-						'<a href="' + data + '" class="' + cls + '" ' + targetAttr + '></a>'
+						DataTableCustom.getElemLink(data, '', cls)
 				,
 					targets: 9
 					visible: false
@@ -464,8 +469,8 @@ $ ->
 					false
 			return
 
+
 	class AllGroupRes
-		
 		@init: ->
 			do this.setupDataTables
 			return

@@ -1,0 +1,270 @@
+%html
+  %head
+    %title Dashboard - All Events
+    %meta{charset:"utf-8"}
+    %meta{content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name:"viewport"}
+    %link{href:"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700", rel:"stylesheet"}
+    %link{href:"https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css", rel:"stylesheet"}
+    %link{href:"assets/plugins/jquery-ui/jquery-ui.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/timepicker/jquery.timepicker.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/nice-select/css/nice-select.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/image-dd/css/msdropdown/dd.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/datatables/datatables.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/datatables/DataTables-1.10.16/css/dataTables.bootstrap.min.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
+
+  %body.home
+    %header.container-fluid.navbar-fixed-top
+      .row.space-0
+        .col-sm-2
+          %a.logo{href:"/"}
+            %img.img-responsive{src:"assets/images/logo-sofitel.png"}
+        .col-sm-6
+          -# %form.navbar-form
+          -#   .form-group
+          -#     %input.form-control{type:"text", placeholder:"Search..."}
+        .col-sm-3.col-sm-offset-1
+          %a.logo-sub{href:"/"}
+            %img{src:"assets/images/sol.png"}
+            %span 
+              %strong Sofitel Singapore Resort
+              Carrina Yang
+    
+    #main
+      %aside#sidebar
+        %ul.main-menu
+          %li
+            %a{href:"all-events.html"}
+              %i.icon.icon-gift
+              ALL EVENTS
+          %li
+            %a{href:"all-group-res.html"}
+              %i.icon.icon-bed
+              ALL GROUP RES.
+          %li
+            %a{href:"#"}
+              %i.icon.icon-people
+              EVENT PLANNERS
+          %li.sub-menu.toggled
+            %a{href:"#"}
+              %i.icon.icon-briefcase
+              HOTEL SETTINGS
+            %ul.child-menu
+              %li
+                %a{href:"#"} Hotel Information
+              %li
+                %a{href:"#"} Facilities
+              %li
+                %a{href:"#"} Accommodation
+              %li
+                %a{href:"#"} Reservation Setup
+          %li.sub-menu.toggled
+            %a{href:"#"}
+              %i.icon.icon-chart
+              REPORTS
+            %ul.child-menu
+              %li
+                %a{href:"#"} Events Report
+              %li
+                %a{href:"#"} Attendees Report
+              %li
+                %a{href:"#"} Conversion Report
+              %li
+                %a{href:"#"} Email Campaigns
+      
+      %section#content
+        %ul.breadcrumb
+          %li
+            %a{href: "#"} All Bookings
+          %li
+            %a{href: "#"} Tech in Asia Singapore 2017
+          %li
+            %a{href: "#"} Reports
+          %li.active All Events
+        
+        .content-header
+          .heading 
+            %h2 Preview Reservation
+            %a.btn.btn-info.btn-lg{href:"#"} Save and Add Another
+            %a.btn.btn-green.btn-lg{href:"#"} Save Reservation
+            %a.btn.btn-gray{href:"#"} Go Back
+        .container-fluid
+          .panel-reservation
+            .row
+              .col-sm-6.structure
+                .row
+                  .col-sm-7.p5
+                    %span PMS CONFIRMATION NO.
+                    %a.a-edit{href:"#"} Edit
+                    %h3 4829123af123468
+                  .col-sm-5.travel-info.p5
+                    %span ASSIGNED ROOM NO.
+                    %a.a-edit{href:"#"} Edit
+                    %h3 _
+              .col-sm-6      
+          .info-reservation-guest
+            .row
+              .col-8
+                .stay-date-time.featrue
+                  %table.p20
+                    %tr
+                      %td Dates
+                      %th 24 Jun 2017 - 26 Jun 2017
+                    %tr 
+                      %td Nights
+                      %th 3
+                    %tr
+                      %td Guests
+                      %th 2 Adults, 3 Children
+                    %tr
+                      %td Room Type
+                      %th Deluxe Luxury Room
+                    %tr
+                      %td Membership ID
+                      %th 123123123
+                    %tr 
+                      %td Remarks
+                      %td.text-gray N/A
+              .col-4
+                .price-sum.featrue.p15
+                  %h4 Price Summary
+                  %table
+                    %tr
+                      %td Subtotal
+                      %td $540.00 SGD
+                    %tr
+                      %td Taxes & Fees
+                      %td $91.80 SGD
+                  %a{href:"#"} Show taxes & fees breakdown
+                  %hr
+                  %table
+                    %tr
+                      %th Total
+                      %th $631.80 SGD
+                    %tr
+                      %td
+                      %td.text11 to be paid at hotel
+                  %hr
+                  %table
+                    %tr
+                      %th 0 nights
+                      %td $315.90 SGD
+                    %tr
+                      %td
+                      %td.text11 avg. / night
+                  %a{href:"#"} Hide nightly breakdown
+            .primary-guest.featrue
+              %h4 Guest (Primary Guest)
+              .row
+                .col-7
+                  %table
+                    %tr
+                      %td 
+                        %b Personal Information
+                    %tr
+                      %td Salutation
+                      %td Mr
+                    %tr
+                      %td First Name
+                      %td Firstname
+                    %tr
+                      %td Last Name
+                      %td Lastname
+                    %tr
+                      %td Phone Number
+                      %td +62 3112 1545 4646
+                    %tr.break
+                      %td Email Address
+                      %td blabla@gmail.com
+                .col-5
+                  .travel-info
+                    %table
+                      %tr
+                        %td 
+                          %b Travel Information
+                      %tr
+                        %td Passport No.
+                        %td A123123123
+                      %tr
+                        %td Passport Expiry
+                        %td 20th December 2018
+                      %tr
+                        %td Nationality
+                        %td Indonesia
+                      %tr
+                        %td Date of Birth
+                        %td 22 October 1984
+                      %tr
+                        %td Arrival Date
+                        %td 02 July 2017
+                      %tr
+                        %td Arrival Time
+                        %td 12 30 PM
+                      %tr
+                        %td Arrival Flight
+                        %td AK131
+            .other-guest.featrue
+              %h4 Guset 2
+              .row
+                .col-7
+                  %table
+                    %tr
+                      %td 
+                        %b Personal Information
+                    %tr
+                      %td Salutation
+                      %td Mr
+                    %tr
+                      %td First Name
+                      %td Firstname
+                    %tr
+                      %td Last Name
+                      %td Lastname
+                    %tr
+                      %td Phone Number
+                      %td +62 3112 1545 4646
+                    %tr
+                      %td Email Address
+                      %td blabla@gmail.com
+                .col-5
+                  .travel-info
+                    %table
+                      %tr
+                        %td 
+                          %b Travel Information
+                      %tr
+                        %td Passport No.
+                        %td A123123123
+                      %tr
+                        %td Passport Expiry
+                        %td 20th December 2018
+                      %tr
+                        %td Nationality
+                        %td Indonesia
+                      %tr
+                        %td Date of Birth
+                        %td 22 October 1984
+                      %tr
+                        %td Arrival Date
+                        %td 02 July 2017
+                      %tr
+                        %td Arrival Time
+                        %td 12 30 PM
+                      %tr
+                        %td Arrival Flight
+                        %td AK131
+          .heading
+            %a.btn.btn-info.btn-lg{href:"#"} Save and Add Another
+            %a.btn.btn-green.btn-lg{href:"#"} Save Reservation
+            %a.btn.btn-gray{href:"#"} Go Back
+
+
+%script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}
+%script{src:"assets/plugins/jquery-ui/jquery-ui.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/timepicker/jquery.timepicker.min.js", type:"text/javascript"}
+%script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/nice-select/js/jquery.nice-select.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/image-dd/js/msdropdown/jquery.dd.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/datatables/datatables.min.js", type:"text/javascript"}
+%script{src:"assets/js/sofitel.js", type:"text/javascript"}
